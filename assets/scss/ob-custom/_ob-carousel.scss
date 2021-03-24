@@ -1,0 +1,28 @@
+.slick-dots {
+	li {
+		height: 10px;
+		width: 20px;
+
+		button {
+			border: 2px solid $ob-blue;
+			height: 10px;
+			width: 10px;
+
+			&:before {
+				height: 8px;
+				width: 8px;
+			}
+
+			&:hover {
+				&:before {
+					background: $ob-orange;
+				}
+			}
+		}
+	}
+	li.slick-active {
+		button:before {
+			background: $ob-blue;
+		}
+	}
+}

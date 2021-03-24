@@ -1,0 +1,37 @@
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="ob-blog-post-intro">
+    {{#if post.thumbnail}}
+        {{> components/common/responsive-img
+            image=post.thumbnail
+            fallback_size="2560w"
+            lazyload="disabled"
+        }}
+    {{/if}}
+    <div class="bg-overlay">
+        <div class="container">
+            <h1 class="ob-heading-xl ob-text-white">{{post.title}}</h1>
+            {{#if post.summary}}<p class="ob-text-white ob-paragraph-md">{{{post.summary}}}</p>{{/if}}
+        </div>
+    </div>
+</div>
+
+<div class="container ob-blog-post-content">
+    <article class="blog blog-article">
+        <div class="blog-post-body">
+            <div class="blog-post">
+                {{{post.body}}}
+            </div>
+
+            {{>components/common/share}}
+        </div>
+    </article>
+</div>

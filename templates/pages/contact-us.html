@@ -1,0 +1,53 @@
+{{#partial "page"}}
+
+{{#if page.title '==' 'Share'}}
+<main class="main full share-story">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 img-col">
+                <img src="{{cdn 'assets/img/ob-custom/food-boxes.jpg'}}" alt="" />
+            </div>
+            <div class="col-md-6 col-sm-6 form-col">
+                {{#if forms.contact.success}}
+                    <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+                {{else}}
+                    <p>{{{page.content}}}</p>
+                    {{> components/page/contact-us-form}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{{else}}
+<main class="page">
+    {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+    {{/unless}}
+
+    {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    {{/if}}
+
+    <div id="contact-us-page" class="page-content page-content--centered">
+        {{#if forms.contact.success}}
+            <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+        {{else}}
+            <p>{{{page.content}}}</p>
+            {{> components/page/contact-us-form}}
+        {{/if}}
+
+    </div>
+</main>
+{{/if}}
+
+{{/partial}}
+
+{{> layout/base}}

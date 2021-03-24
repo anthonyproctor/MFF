@@ -1,0 +1,78 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<main class="main full quickstart">
+    <div class="container">
+        <h1 class="page-heading">Pick a Meal to Get Started</h1>
+        <h3 class="sub-heading ob-heading-xs">
+            Or <a href="/meals/" class="ob-heading-xs ob-text-orange">View All</a>
+        </h3>
+
+        <div class="meals-list">
+            <div class="meal-block">
+                <div class="img-wrap">
+                    <a href="/breakfast"><img src="{{cdn 'assets/img/ob-custom/chicken-tacos.png'}}" alt="" /></a>
+                </div>
+                <a href="/breakfast">
+                    <h4 class="ob-heading-sm">Breakfast</h4>
+                    <h5 class="ob-heading-xs">HIGH-PROTEIN &amp; HIGH-FATS</h5>
+                </a>
+            </div>
+            <div class="meal-block">
+                <div class="img-wrap">
+                    <a href="/lunch"><img src="{{cdn 'assets/img/ob-custom/shredded-bbq.png'}}" alt="" /></a>
+                </div>
+                <a href="/lunch">
+                    <h4 class="ob-heading-sm">LUNCH</h4>
+                    <h5 class="ob-heading-xs">CLEAN &amp; DELICIOUS LUNCHES</h5>
+                </a>
+            </div>
+            <div class="meal-block">
+                <div class="img-wrap">
+                    <a href="/dinner"><img src="{{cdn 'assets/img/ob-custom/salmon-meal.png'}}" alt="" /></a>
+                </div>
+                <a href="/dinner">
+                    <h4 class="ob-heading-sm">DINNER</h4>
+                    <h5 class="ob-heading-xs">LOW-CARB &amp; FRESH VEGETABLES</h5>
+                </a>
+            </div>
+            <div class="meal-block">
+                <div class="img-wrap">
+                    <a href="/snacks"><img src="{{cdn 'assets/img/ob-custom/sample-tray.png'}}" alt="" /></a>
+                </div>
+                <a href="/snacks">
+                    <h4 class="ob-heading-sm">SNACKS</h4>
+                    <h5 class="ob-heading-xs">HIGH-PROTEIN &amp; HIGH-FATS</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="consultation">
+        <div class="container">
+            <div class="title-block">
+                <h4 class="ob-heading-xs ob-text-blue">Get Expert Advice</h4>
+                <h2 class="ob-heading-lg">CLAIM YOUR COMPLIMENTARY CONSULTATION</h2>
+            </div>
+
+            <div class="claim-arrow">
+                <a href="#">
+                    <svg><use xlink:href="#icon-ob-arrow-lr-blue" /></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

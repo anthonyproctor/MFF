@@ -1,0 +1,111 @@
+{{#if banners.bottom}}
+    {{#if settings.data_tag_enabled}}
+        <div class="banners" data-banner-location="bottom">
+            {{#each (limit banners.bottom_metadata 1)}}
+                <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-name="{{this.banner-name}}">
+                    <div data-event-type="promotion-click">
+                        {{{this.content}}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <div class="banners" data-banner-location="bottom">
+            <div class="banner">
+                {{{limit banners.bottom 1}}}
+            </div>
+        </div>
+    {{/if}}
+{{/if}}
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <section class="footer-info row">
+            <div class="col-md-8 col-sm-12">
+                <article class="footer-info-col col-md-4 col-sm-4" data-section-type="footer-webPages">
+                    <h3 class="footer-info-heading">About</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <a href="/why-mff/">About MyFitFoods</a>
+                        </li>
+                        <li>
+                            <a href="/success-stories/">Real Stories</a>
+                        </li>
+                        <li>
+                            <a href="/locations/">Locations</a>
+                        </li>
+                        <li>
+                            <a href="/fit-club/">Fit Club</a>
+                        </li>
+                        <li>
+                            <a href="/faq/">FAQs</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-info-col col-md-4 col-sm-4" data-section-type="footer-webPages">
+                    <h3 class="footer-info-heading">Foods</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <a href="/quickstart/">Shop All Meals</a>
+                        </li>
+                        <li>
+                            <a href="/breakfast/">Breakfast</a>
+                        </li>
+                        <li>
+                            <a href="/lunch/">Lunch</a>
+                        </li>
+                        <li>
+                            <a href="/dinner/">Dinner</a>
+                        </li>
+                        <li>
+                            <a href="/snacks/">Snacks</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-info-col col-md-4 col-sm-4" data-section-type="footer-webPages">
+                    <h3 class="footer-info-heading">Info</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <a href="/blog/">The Fit Life Blog</a>
+                        </li>
+                        <!--<li>-->
+                        <!--    <a href="/brand-assets/">Brand Assets</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="/contact-us/">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="/fitchecks/">#Fitchecks</a>
+                        </li>
+                        <li>
+                            <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <article class="footer-info-col footer-social-col col-md-12">
+                    <img src="{{cdn 'assets/img/ob-custom/logo-green.png'}}" class="sub-logo" alt="" />
+
+                    <div class="social-block">
+                        <a href="https://www.facebook.com/MyFitFoodsMeals"><img src="{{cdn 'assets/img/ob-custom/facebook.png'}}" alt="" /></a>
+                        <a href="https://www.instagram.com/myfitfoodsofficial/"><img src="{{cdn 'assets/img/ob-custom/instagram.png'}}" alt="" /></a>
+                        <span>#GIVEAFIT</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="privacy-links">
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms-of-service/">Terms of Service</a>
+                </div>
+
+                <div class="footer-store">
+                    <p>&copy; {{moment format="YYYY"}} MyFitFoods, LLC.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

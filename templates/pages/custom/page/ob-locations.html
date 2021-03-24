@@ -1,0 +1,22 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="main full locations">
+    {{> components/ob-custom/locations/locations-hero}}
+    {{> components/ob-custom/locations/locations-grid}}
+
+    {{> components/ob-custom/locations/locations-roadmap}}
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

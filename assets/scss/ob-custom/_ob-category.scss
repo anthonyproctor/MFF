@@ -1,0 +1,98 @@
+ol.breadcrumbs {
+	margin-top: 0!important;
+
+	li {
+		.breadcrumb-label {
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.sidebarBlock {
+	border-top: none!important;
+	padding-top: 0!important;
+}
+.sidebarBlock h2 {
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 10px;
+	font-size: 16px;
+
+	&:after {
+		content: "";
+		width: 20%;
+		background: $ob-light-green;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.accordion--navList .accordion-title {
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+}
+.accordion-block {
+	.form-minMaxRow .button {
+		font-size: 12px;
+		height: 45px;
+		padding: 0 10px;
+	}
+}
+.facetedSearch-refineFilters p {
+	font-size: 16px;
+}
+.accordion--navList .accordion-block {
+	margin-top: 20px;
+}
+.facetedSearch-navList.is-open .accordion--navList, 
+.facetedSearch-navList.is-open .accordion-block .accordion-navigation span,
+.navList-action--checkbox,
+.navList-action--checkbox span {
+	font-size: 16px;
+}
+
+.category-page {
+	.category-top {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+
+		@include breakpoint("medium") {
+			flex-wrap: nowrap;
+		}
+
+		.page-heading {
+			display: inline-flex;
+			margin: 0;
+		}
+
+		.actionBar {
+			float: right;
+			display: inline-flex;
+			border: 1px solid $ob-gray;
+			margin: 10px 0 0!important;
+
+			@include breakpoint("medium") {
+				margin: 0!important;
+			}
+
+			.form-field {
+				margin: 0;
+				border: none;
+				padding: 0;
+				text-transform: uppercase;
+
+				select {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

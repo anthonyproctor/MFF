@@ -1,0 +1,41 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .header {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+</style>
+
+<main class="main full ob-location ob-new-location">
+    <div class="location-hero">
+        <iframe class="brz-iframe intrinsic-ignore brz-bg-map__cover" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Houston, TX&zoom=15" style="display:block"></iframe>
+
+        <div class="bg-overlay">
+            <div class="container">
+                <img src="{{cdn 'assets/img/ob-custom/logo-green.png'}}" class="sub-logo" alt="" />
+                
+                <h1 class="page-heading ob-heading-xl ob-text-white">
+                    SUBSCRIBE TO GET EXCLUSIVE DEALS & UPDATES ON THE NEW HOUSTON KITCHEN
+                </h1>
+
+                <p class="ob-paragraph-lg ob-text-white">
+                    Enter your email below to get on our VIP Houston list.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

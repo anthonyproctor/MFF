@@ -1,0 +1,213 @@
+.skip-to-top {
+	height: 16px;
+	width: 16px;
+	display: none;
+	position: fixed;
+	z-index: 2000;
+	bottom: 40px;
+	right: 35px;
+
+	svg {
+		height: 16px;
+		width: 16px;
+	}
+
+	&:visited {
+		color: $ob-blue;
+	}
+	&:hover,
+	&:active {
+		color: $ob-orange;
+	}
+}
+
+.header {
+	display: flex;
+	border-color: $ob-light-gray;
+	background: #fff;
+	height: 75px;
+	padding: 10px 0;
+
+	@include breakpoint("medium") {
+		border-color: $ob-white;
+	}
+
+	.header-container {
+		flex-wrap: nowrap;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.header-logo {
+		width: 170px;
+		margin: 0 auto;
+		display: inline-flex;
+
+		@include breakpoint("medium") {
+			margin: 0 50px 0 0;
+		}
+	}
+
+	.navPages-container {
+		@include breakpoint("medium") {
+			margin-top: 15px;
+			display: inline-flex;
+			max-width: 900px;
+		}
+
+		.navPages {
+			background: #fff;
+			max-width: 100%;
+
+			@include breakpoint("medium") {
+				height: auto;
+			}
+
+			&:before {
+				display: none;
+			}
+			&:after {
+				display: none;
+			}
+
+			.navPages-list {
+				li {
+					a {
+						color: $ob-blue;
+						padding: 10px 0;
+						font-size: 22px;
+
+						@include breakpoint("medium") {
+							padding: 10px 15px;
+							font-size: 15px;
+						}
+
+						svg {
+							max-width: 16px;
+							max-height: 16px;
+							stroke: none;
+							fill: $ob-blue;
+							margin: 0;
+						}
+						span.ob-mobile {
+							font-size: 22px;
+							font-weight: 700;
+						}
+
+						&:hover {
+							color: $ob-orange;
+						}
+
+						&:after {
+						    content: "";
+						    display: block;
+						    width: 0%;
+						    border-bottom: 2px solid $ob-orange;
+						    transition: .5s;
+						    text-align: center;
+						    margin: 0 auto;
+						}
+
+						&:hover:after {
+						    width: 100%;
+						}
+					}
+				}
+				&--user {
+					display: none;
+				}
+			}
+		}
+
+		&.is-open {
+			padding-top: 65px;
+		}
+	}
+	.navPages-item-icon a {
+		min-height: 48px;
+		margin-top: 3px;
+
+		.navUser-item-cartLabel {
+			display: inline-block;
+		}
+	}
+	.countPill {
+		background: none;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		color: $ob-blue;
+		font-size: 15px;
+		line-height: 26px;
+		margin: 0;
+		width: auto;
+		height: auto;
+	}
+	.ob-search-toggle {
+		display: none;
+
+		@include breakpoint("medium") {
+			display: flex;
+		}
+	}
+	.navPages-quickSearch {
+		height: 50px;
+		width: 250px!important;
+		background: $ob-white;
+		margin: 0 0 10px;
+		border: 1px solid $ob-gray;
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		z-index: 10;
+
+		@include breakpoint("medium") {
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, .25);
+			width: 200px;
+			margin: 0;
+			border: none;
+		}
+
+		.form {
+			max-width: 90%;
+			padding: 10px;
+			margin: 0;
+			display: inline-block;
+
+			.form-input {
+				height: 30px;
+			}
+		}
+
+		span.exit {
+			width: 15px;
+			height: 15px;
+			clear: none;
+			float: right;
+			margin: 12px 5px 0 0;
+			cursor: pointer;
+			display: none;
+
+			@include breakpoint("medium") {
+				display: block;
+			}
+		}
+
+		.modal-close {
+			display: none;
+		}
+
+		.quickSearchResults {
+			display: none;
+		}
+	}
+
+	.mobileMenu-toggle {
+		margin-top: -10px;
+
+		.mobileMenu-toggleIcon {
+			font-size: 0;
+		}
+	}
+}

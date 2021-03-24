@@ -1,0 +1,35 @@
+//***************************
+//colors
+//***************************
+
+$ob-white: #FFFFFF;
+$ob-blue: #005677;
+$ob-light-blue: #007cba;
+$ob-orange: #ff9e18;
+$ob-dark-orange: #dc8017;
+$ob-dark-green: #375542;
+$ob-light-green: #A0D55D;
+$ob-gold: #ffb86d;
+
+$ob-text-primary: $ob-blue;
+$ob-text-secondary: $ob-light-green;
+
+$ob-light-gray: #DEDEDE;
+$ob-gray: rgba(230, 231, 232, 0.9);
+$ob-dark-gray: #333333;
+
+$ob-shipping-blue: #2196f3;
+$ob-shipping-blue-active: #4dabf5;
+$ob-shipping-green: #6fbf73;
+$ob-shipping-orange: #f44336;
+
+//***************************
+//drop shadows
+//***************************
+$ob-shadow-1: 0px 9px 33px rgba(57, 106, 120, 0.2);
+$ob-shadow-2: drop-shadow(0px 9px 33px rgba(100, 120, 131, 0.15));
+
+//***************************
+//borders
+//***************************
+$ob-radius-1: 2px;

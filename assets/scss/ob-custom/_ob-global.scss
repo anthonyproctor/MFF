@@ -1,0 +1,231 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&display=swap');
+
+//***************************
+//elements
+//***************************
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, p, span, a, button {
+  color: $ob-text-primary;
+  font-family: Overpass, sans-serif;
+  letter-spacing: .05em;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+a:visited {
+    color: $ob-blue;
+}
+a:hover,
+a:focus {
+    color: $ob-orange;
+}
+
+p {
+  color: $ob-text-primary;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Overpass, sans-serif;
+  margin-top: 0;
+  text-transform: uppercase;
+  color: $ob-text-primary;
+  letter-spacing: .05em;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.page-heading {
+  text-align: left;
+}
+
+input:focus, button:focus, textarea:focus, select:focus, details:focus, [href]:focus, [tabindex]:not([tabindex="-1"]):focus, [contenteditable="true"]:focus {
+  outline: none !important;
+}
+
+input:focus + label {
+  outline: none!important;
+}
+
+img {
+  border-radius: $ob-radius-1;
+}
+
+.body {
+  margin-bottom: 0;
+  margin-top: 100px;
+  overflow-x: hidden;
+
+  @include breakpoint("small") {
+    margin-top: 70px;
+  }
+  @include breakpoint("medium") {
+    margin-top: 20px;
+  }
+}
+//***************************
+//Remove container styling from certain pages
+//***************************
+//layouts based on data page type for certain pages
+
+.container {
+  overflow: hidden;
+}
+
+body {
+  padding-top: 0px;
+}
+
+.container[data-page-type="default"] {
+  max-width: unset;
+  padding: 0px;
+  margin: 0px;
+}
+
+.page {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.page-content--centered {
+  width: 100% !important;
+}
+
+.page-sidebar {
+  padding: 0 20px 0 0;
+}
+
+//***************************
+//Breadcrumb styles
+//***************************
+ol.breadcrumbs {
+  margin-top: 3rem;
+  text-align: left;
+  .breadcrumb-label {
+    @extend .ob-text-primary;
+    @extend .ob-paragraph-sm;
+    text-decoration: none;
+    span {
+      color: $ob-text-primary;
+    }
+  }
+  .breadcrumb.is-active {
+    span {
+      color: #888888;
+      font-weight: 400;
+    }
+    
+  }
+  .breadcrumb:not(:first-child) {
+    &:before {
+      
+      border: none;
+      transform: none;
+      width: 4px;
+      height: 7px;
+      content: url('https://store-ny2ro.mybigcommerce.com/content/breadcrumb-arrow.svg');
+    }
+  }
+}
+
+//***************************
+//Misc styles
+//***************************
+.u-hiddenVisually {
+  margin: 0 !important;
+  display: none;
+  .form-label {
+    margin: 0!important;
+    height: 0!important;
+  }
+}
+
+div[data-cart-status] {
+  .alertBox--info {
+    display: none;
+  }
+}
+
+.ob-content-panel {
+  padding: 65px 0;
+
+  @include breakpoint("medium") {
+    padding: 100px 0;
+  }
+
+  &-75 {
+    padding: 40px 0;
+
+    @include breakpoint("medium") {
+      padding: 75px 0;
+    }
+  }
+
+  &-200 {
+    padding: 75px 0;
+
+    @include breakpoint("medium") {
+      padding: 200px 0;
+    }
+  }
+
+  &-center {
+    text-align: center;
+  }
+}
+
+
+//***************************
+//visibility helpers
+//***************************
+.ob-desktop {
+  @media only screen and (max-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.ob-mobile {
+  @media only screen and (min-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.ob-hidden {
+  display:none;
+}
+
+//***************************
+//SUBSCRIPTION FORM
+//***************************
+.ob-subscription-form {
+  margin-bottom: 0px;
+}
+.ob-subscription-input {
+  margin-bottom: 0 !important;
+  border-radius: 2px 0px 0px 2px !important;
+  border-right: none;
+  border: 1px solid transparent !important;
+  height: 50px !important;
+  background-color: white;
+}
+.ob-subscription-btn {
+  max-height: 100%;
+  max-width: 50px;
+  width: 50px;
+  border-radius: 0px 2px 2px 0px;
+  padding: 10px;
+  svg {
+    margin: 0px;
+  }
+}
+
+.skip-to-main-link {
+  display: none;
+}

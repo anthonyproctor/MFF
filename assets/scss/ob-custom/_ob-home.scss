@@ -1,0 +1,391 @@
+.fit-meals-wrapper {
+	overflow: hidden;
+	position: relative;
+	height: 56px;
+
+	.fit-meals-btn {
+		position: absolute;
+		left: 0;
+		bottom: -75px;
+		opacity: 0;
+		top: auto;
+	}
+}
+.ob-hero-banner {
+	margin-top: 74px;
+	background-image: url(../img/ob-custom/home-hero-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: -325px center;
+	background-size: cover;
+	background-color: #dadadc;
+
+	@include breakpoint("small") {
+		background-position: right top;
+	}
+	@include breakpoint("large") {
+		background-position: right top -110px;
+	}
+	@include breakpoint("medium") {
+		background-position: right top -25px;
+		margin: 0;
+	}
+
+	.bg-overlay {
+		background-color: rgba(255, 255, 255, .8);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 125px 0;
+
+		@include breakpoint("small") {
+			background: transparent;
+		}
+		@include breakpoint("large") {
+			min-height: 70vh;
+		}
+	}
+
+	.panel-content {
+		width: 100%;
+		padding: 0 20px;
+		position: relative;
+
+		@include breakpoint("small") {
+			width: 400px;
+		}
+		@include breakpoint("medium") {
+			width: 550px;
+		}
+		@include breakpoint("large") {
+			width: 625px;
+		}
+	}
+}
+
+.ob-covid-banner {
+	padding: 30px 0;
+	text-align: center;
+	background: $ob-dark-orange;
+
+	p {
+		margin: 0;
+
+		a {
+			color: $ob-white;
+		}
+	}
+}
+
+.ob-choices-panel {
+	.row {
+		align-items: flex-start;
+	}
+
+	h2 {
+		padding: 20px 0 20px 25px;
+		border-left: 5px solid $ob-orange;
+		font-size: 26px;
+
+		@include breakpoint("medium") {
+			padding: 20px 0 20px 50px;
+			font-size: 33px;
+		}
+	}
+
+	.panel-content-block {
+		padding: 20px 50px;
+
+		p {
+			min-height: 90px;
+			line-height: 28px;
+		}
+
+		svg {
+			height: 50px;
+			max-height: 50px;
+			max-width: 50px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.ob-quality-panel {
+	background-image: url(../img/ob-custom/home-quality-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include breakpoint("medium") {
+		background-position: right top;
+		margin: 0;
+	}
+
+	.bg-overlay {
+		background-color: rgba(55, 85, 66, 0.95);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 80px 0;
+	}
+
+	h3 {
+		color: $ob-light-green;
+		font-weight: 800;
+		font-size: 26px;
+	}
+
+	.image-col {
+		justify-content: right;
+		text-align: right;
+
+		img {
+			margin-right: 25px;
+		}
+	}
+}
+
+.ob-21-days-panel {
+	.btn-block {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include breakpoint("medium") {
+			flex-wrap: nowrap;
+		}
+
+		.ob-btn {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin: 0 0 20px 0;
+
+			@include breakpoint("medium") {
+				display: inline-flex;
+				margin: 0 25px 0 0;
+			}
+		}
+	}
+}
+
+.ob-testimonials-panel {
+	background: #4B6655;
+	display: flex;
+	align-items: center;
+
+	@include breakpoint("large") {
+		min-height: 55vh;
+	}
+
+	.quote {
+		text-align: center;
+		padding: 0 70px;
+
+		@include breakpoint("small") {
+			padding: 0 100px;
+		}
+
+		p {
+			font-size: 22px;
+			line-height: 32px;
+			font-weight: 700;
+
+			@include breakpoint("small") {
+				font-size: 30px;
+				line-height: 36px;
+			}
+			@include breakpoint("medium") {
+				font-size: 36px;
+				line-height: 45px;
+			}
+		}
+
+		.source {
+			text-transform: uppercase;
+
+			span {
+				display: block;
+				color: $ob-light-green;
+			}
+			.location {
+				font-size: 75%;
+			}
+		}
+	}
+
+	.slick-arrow {
+		height: 30px;
+		width: 30px;
+		background: none;
+		border: none;
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 25px;
+
+		@include breakpoint("small") {
+			right: 15px;
+		}
+	}
+	.slick-prev:before {
+		background-image: url(../icons/ob-arrow-lr.svg);
+		background-position: center;
+		transform: scaleX(-1);
+    	filter: FlipH;
+    	-ms-filter: "FlipH";
+    	width: 30px;
+    	height: 30px;
+    	background-size: 30px 30px;
+	}
+	.slick-next:before {
+		background-image: url(../icons/ob-arrow-lr.svg);
+		background-position: center;
+    	width: 30px;
+    	height: 30px;
+    	background-size: 30px 30px;
+	}
+}
+
+.ob-popular-panel {
+	text-align: center;
+
+	@include breakpoint("small") {
+		text-align: left;
+	}
+	
+	.text-col {
+		order: 2;
+
+		@include breakpoint("small") {
+			order: 1;
+		}
+	}
+	.slide-col {
+		order: 1;
+
+		@include breakpoint("small") {
+			order: 2;
+		}
+	}
+}
+
+.ob-new-meal-panel {
+	background: $ob-gray;
+
+	.item-content-col {
+		order: 2;
+		text-align: center;
+		justify-content: center;
+
+		@include breakpoint("small") {
+			padding-left: 75px;
+			padding-right: 75px;
+			order: 1;
+			text-align: left;
+			justify-content: flex-start;
+		}
+
+		.quote {
+			font-size: 80%;
+			font-weight: 700;
+		}
+	}
+	.item-stats-col {
+		display: none;
+		order: 2;
+
+		@include breakpoint("small") {
+			display: inline-block;
+		}
+
+		p {
+			font-weight: 700;
+			padding-right: 25px;
+
+			@include breakpoint("medium") {
+				padding-right: 50px;
+			}
+
+			span {
+				display: block;
+				font-size: 50%;
+				margin-top: 10px;
+				font-weight: 700;
+			}
+		}
+	}
+	.item-image-col {
+		order: 1;
+
+		@include breakpoint("small") {
+			order: 3;
+		}
+	}
+}
+
+.ob-social-embed {
+	text-align: center;
+	justify-content: center;
+}
+
+.ob-commitment-panel {
+	background: $ob-gray;
+
+	.image-col {
+		text-align: center;
+		justify-content: center;
+	}
+
+	.btn-block {
+		text-align: center;
+
+		@include breakpoint("small") {
+			text-align: left;
+		}
+	}
+}
+
+.ob-newsletter-panel {
+	padding-top: 0!important;
+	padding-bottom: 0!important;
+	text-align: center;
+	justify-content: center;
+	background-image: url(../img/ob-custom/home-news-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include breakpoint("medium") {
+		background-position: right top;
+		margin: 0;
+	}
+
+	.bg-overlay {
+		background-color: rgba(55, 85, 66, 0.9);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 80px 20px;
+	}
+
+	.container {
+		max-width: 800px!important;
+
+		h2 {
+			margin-bottom: 50px;
+			letter-spacing: 0.1em;
+
+			@include breakpoint("medium") {
+				letter-spacing: 0.05em;
+			}
+		}
+
+		.form {
+			margin: 0;
+		}
+	}
+}

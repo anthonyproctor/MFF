@@ -1,0 +1,26 @@
+.cart-item-quantity {
+	.form-increment {
+		display: flex;
+		justify-content: center;
+
+		input {
+			height: 50px;
+			border: 1px solid $ob-gray;
+		}
+		button {
+			background: $ob-blue;
+			border-color: $ob-blue;
+			height: 50px;
+
+			svg {
+				max-height: 25px;
+				max-width: 25px;
+				margin: 0;
+				fill: $ob-light-green;
+			}
+		}
+	}
+}
+.cart-actions {
+	padding-bottom: 20px;
+}

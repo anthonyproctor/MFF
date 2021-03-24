@@ -1,0 +1,121 @@
+.ob-location {
+	.location-hero {
+		width: 100%;
+		position: relative;
+		display: flex;
+		min-height: 65vh;
+		max-height: 75vh;
+		align-items: center;
+		justify-content: center;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			min-height: 65vh;
+			max-height: 75vh;
+			z-index: 1;
+		}
+
+		.bg-overlay {
+			position: relative;
+			width: 100%;
+			min-height: 65vh;
+			max-height: 75vh;
+			background: rgba(8, 53, 70, 0.8);
+			z-index: 2;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			h1 {
+				text-align: center;
+			}
+
+			.ob-btn {
+				padding: 0 25px;
+			}
+		}
+	}
+
+	.location-content {
+		padding: 50px 0;
+
+		.row {
+			align-items: flex-start;
+		}
+	}
+
+	.location-contact {
+		margin-top: 50px;
+		padding-top: 40px;
+		border-top: 2px solid rgba(230, 231, 232, 1); 
+
+		.col-md-6 {
+			padding: 10px;
+		}
+
+		p {
+			margin: 0;
+			font-size: 17px;
+			line-height: 24px;
+
+			a {
+				font-size: 17px;
+				line-height: 24px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.location-map {
+		iframe {
+			width: 100%;
+			border: none;
+			height: 100%;
+			border-radius: 10px;
+			min-height: 500px;
+		}
+	}
+}
+
+.ob-new-location {
+	min-height: 100vh;
+	max-height: 100vh;
+
+	.location-hero {
+		min-height: 100vh;
+		max-height: 100vh;
+
+		img {
+			margin-bottom: 25px;
+			height: 60px;
+		}
+
+		iframe {
+			min-height: 100vh;
+			max-height: 100vh;
+		}
+
+		.bg-overlay {
+			min-height: 100vh;
+			max-height: 100vh;
+			background: rgba(25, 25, 25, 0.5);
+		}
+	}
+}
+
+.share-story {
+	h2 {
+		margin-bottom: 0;
+	}
+	.img-col {
+		img {
+			object-fit: cover;
+			width: 100%;
+			border-radius: 10px;
+		}
+	}
+}

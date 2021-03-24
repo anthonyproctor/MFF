@@ -1,0 +1,33 @@
+<div class="ob-content-panel ob-newsletter-panel locations-newsletter">
+	<div class="container">
+		<h2 class="ob-heading-lg ob-text-blue">WANT TO KNOW WHEN WE’VE ARRIVED?</h2>
+		<p class="ob-paragraph-lg ob-text-blue">Get exclusive deals at new and upcoming locations too!</p>
+		<form class="form" action="{{urls.subscribe.action}}" method="post">
+		    <fieldset class="form-fieldset">
+		        <input type="hidden" name="action" value="subscribe">
+		        <input type="hidden" name="nl_first_name" value="bc">
+		        <input type="hidden" name="check" value="1">
+		        <div class="form-field">
+		            <div class="form-prefixPostfix wrap">
+		                <input class="form-input"
+		                       id="nl_email"
+		                       name="nl_email"
+		                       type="email"
+		                       value="{{customer.email}}"
+		                       placeholder="{{lang 'newsletter.email_placeholder'}}"
+		                       aria-describedby="alertBox-message-text"
+		                >
+		                <input class="button button--primary ob-btn-blue form-prefixPostfix-button--postfix"
+		                       type="submit"
+		                       value="{{lang 'newsletter.subscribe_submit'}}"
+		                >
+		            </div>
+		            {{#if settings.show_newsletter_summary }}
+		                <div class="footer-newsletter-summary">{{settings.newsletter_summary}}</div>
+		            {{/if}}
+		        </div>
+		    </fieldset>
+		</form>
+		<p class="ob-paragraph-sm sub-notice">We’ll never share your personal information because that’s not cool.</p>
+	</div>
+</div>

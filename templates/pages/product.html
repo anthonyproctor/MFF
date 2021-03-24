@@ -1,0 +1,50 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{inject 'productId' product.id}}
+
+{{#partial "page"}}
+
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    {{#each product.shipping_messages}}
+        {{> components/common/alert/alert-info message}}
+    {{/each}}
+
+    <div itemscope itemtype="http://schema.org/Product">
+        {{> components/ob-custom/products/ob-product-view schema=true  }}
+
+        {{{region name="product_below_content"}}}
+
+        {{#if product.videos.list.length}}
+            {{> components/products/videos product.videos}}
+        {{/if}}
+
+        {{#all settings.show_product_reviews theme_settings.show_product_reviews (if theme_settings.show_product_details_tabs '!==' true)}}
+            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+        {{/all}}
+
+        {{#if product.related_products}}
+            <h4 class="ob-heading-sm">Related Products</h4>
+            <div id="tab-related">
+                {{> components/products/carousel products=product.related_products columns=4 list="Related Products"}}
+            </div>
+        {{/if}}
+
+        {{#if product.similar_by_views}}
+            <h4 class="ob-heading-sm">Customers Also Viewed</h4>
+            <div id="tab-similar">
+                {{> components/products/carousel products=product.similar_by_views columns=4 list="Customers Also Viewed" customArrowClass='js-viewed-product-arrow' }}
+            </div>
+        {{/if}}
+    </div>
+{{/partial}}
+{{> layout/base}}

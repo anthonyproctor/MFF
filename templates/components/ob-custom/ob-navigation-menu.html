@@ -1,0 +1,90 @@
+<nav class="navPages">
+    <div class="navPages-quickSearch ob-mobile">
+      {{> components/common/quick-search name='nav-menu-quick-search'}}
+    </div>
+
+    <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action"
+               href="/quickstart"
+               aria-label="Shop">
+                Shop
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if 'Why MFF?' '==' ../page.title}} activePage{{/if}}"
+               href="/why-mff"
+               aria-label="Why MFF?">
+                Why MFF?
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if 'Fit Club' '==' ../page.title}} activePage{{/if}}"
+               href="/fit-club"
+               aria-label="Fit Club">
+                Fit Club
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if '21 Days' '==' ../page.title}} activePage{{/if}}"
+               href="/21-day-challenge"
+               aria-label="21 Days">
+                21 Days
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if 'Locations' '==' ../page.title}} activePage{{/if}}"
+               href="/locations"
+               aria-label="Locations">
+                Locations
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if 'Blog' '==' ../page.title}} activePage{{/if}}"
+               href="/blog"
+               aria-label="Blog">
+                Blog
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page navPages-item-icon">
+            {{#if customer}}
+                <a class="navPages-action"
+                   href="{{urls.account.index}}"
+                   aria-label="{{lang 'common.account'}}"
+                >
+                 <svg><use xlink:href="#icon-account" /></svg>
+                </a>
+            {{else}}
+                <a class="navPages-action"
+                   href="{{urls.auth.login}}"
+                   aria-label="{{lang 'common.login'}}"
+                >
+                <svg class="ob-desktop"><use xlink:href="#icon-account" /></svg>
+                <span class="ob-mobile">Account</span>
+                </a>
+            {{/if}}
+        </li>
+        <li class="navPages-item navPages-item-page navPages-item-icon">
+            <a class="navPages-action"
+               href="{{urls.cart}}"
+               aria-label="{{lang 'cart.nav_aria_label'}}"
+            >
+                <span class="navUser-item--sub navUser-item-cartLabel ob-desktop">          
+                  <svg><use xlink:href="#icon-ob-basket" /></svg>              
+                </span>
+                <span class="navUser-item--sub full-cart-qty ob-desktop">(<span class="countPill cart-quantity"></span>)</span>
+                <span class="ob-mobile">
+                  View Cart
+                  <span class="navUser-item--sub full-cart-qty">(<span class="countPill cart-quantity"></span>)</span>
+                </span>
+            </a>
+        </li>
+        <li class="navPages-item navPages-item-page navPages-item-search navPages-item-icon">
+          <a class="navPages-action ob-search-toggle">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ob-search"></use>
+            </svg>
+          </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,27 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="main full privacy">
+    <div class="ob-content-panel hero">
+        <div class="container">
+            <h1 class="ob-heading-xl ob-text-white">Terms of Service</h1>
+            <p class="ob-paragraph-md ob-text-white">The fine print that our lawyers say we have to have in order to keep serving you deliciously healthy ready-to-eat meals.</p>
+        </div>
+    </div>
+    <div class="container policy-container">
+        {{{page.content}}}
+    </div>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

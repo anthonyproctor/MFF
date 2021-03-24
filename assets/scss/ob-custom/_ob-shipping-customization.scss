@@ -1,0 +1,160 @@
+.ob-shipping-modal {
+  width: 800px !important;
+  max-width: calc(100% - 14px) !important;
+}
+
+// Shipping Buttons
+
+.ob-shipping-picker {
+  h4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@mixin shipping-choices-button() {
+  padding: 1rem 2rem;
+  color: $ob-shipping-blue;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  border: 3px solid $ob-shipping-blue;
+  background-color: none;
+  font-weight: 500;
+  &:hover {
+    background-color: $ob-shipping-blue-active;
+    border: 3px solid $ob-shipping-blue-active;
+    color: white;
+  }
+  &.active {
+    background-color: $ob-shipping-green;
+    border: 3px solid $ob-shipping-green;
+    color: white;
+  }
+}
+.shipping-method-choice-button {
+  @include shipping-choices-button();
+}
+
+
+.hidden-section {
+  display: none !important;
+}
+
+
+#zip-code-input, 
+#zip-code-verification-trigger {
+  width: 225px;
+  padding: 1rem;
+  border-radius: 3px;
+  outline: none;
+}
+
+#zip-code-verification-trigger {
+  width: 225px;
+  padding: 1rem;
+  border-radius: 3px;
+  outline: none;
+  background-color: $ob-shipping-blue;
+  border: 3px solid $ob-shipping-blue;
+  color: white;
+  font-weight: 500;
+  &:hover {
+    background-color: $ob-shipping-blue-active;
+    border: 3px solid $ob-shipping-blue-active;
+  }
+  &.success {
+    background-color: $ob-shipping-green;
+    border: 3px solid $ob-shipping-green;
+    &:hover {
+      background-color: $ob-shipping-green;
+      border: 3px solid $ob-shipping-green;
+    }
+  }
+}
+
+#zip-validation-message,
+#checkout-validation-message {
+  margin: 1rem 0;
+  &.error {
+    color: $ob-shipping-orange;
+  }
+  &.success {
+    border-color: $ob-shipping-green;
+  }
+}
+
+#zip-code-input {
+  width: 225px;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  outline: none;
+  border: 3px solid rgba(0,0,0,0.15);
+  text-align: center;
+  &.error {
+    border-color: $ob-shipping-orange;
+  }
+  &.success {
+    border-color: $ob-shipping-green;
+  }
+}
+
+#flatpickr-instance {
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+#calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#confirm-shipping {
+  padding: 1rem;
+  background-color: $ob-shipping-blue;
+  color: white;
+  font-weight: 500;
+  border-radius: 3px;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: $ob-shipping-blue-active;
+  }
+}
+
+.time-picker-button {
+  @include shipping-choices-button();
+}
+
+.cached-line-item {
+  margin-bottom: 0.5rem;
+}
+
+#calendar-section {
+  .form-control.input {
+    padding: 0.5rem 1rem;
+    // margin-bottom: 2rem;
+  }
+}
+
+#delivery-time-group {
+  margin-top: 2rem;
+}
+
+#confirm-shipping {
+  margin-top: 0;
+}
+
+#store-hours-contain {
+  span {
+    display: block;
+  }
+}
+
+
+.ob-shipping-buttons button,
+.pickup-radio-group,
+.zip-code-verification-container {
+  margin-bottom: 1.5rem;
+}

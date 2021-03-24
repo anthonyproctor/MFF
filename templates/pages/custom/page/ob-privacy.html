@@ -1,0 +1,27 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="main full privacy">
+    <div class="ob-content-panel hero">
+        <div class="container">
+            <h1 class="ob-heading-xl ob-text-white">PRIVACY POLICY</h1>
+            <p class="ob-paragraph-md ob-text-white">We take privacy seriously. Your privacy and ours as well.</p>
+        </div>
+    </div>
+    <div class="container policy-container">
+        {{{page.content}}}
+    </div>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

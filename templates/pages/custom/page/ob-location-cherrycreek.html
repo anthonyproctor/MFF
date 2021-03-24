@@ -1,0 +1,41 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .header {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+</style>
+
+<main class="main full ob-location ob-new-location">
+    <div class="location-hero">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14592.847255142033!2d-104.98912574989473!3d39.7448566409215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7e99c02ef395%3A0x55cc2e545251340e!2sCherry%20Creek%2C%20Denver%2C%20CO!5e0!3m2!1sen!2sus!4v1615317698843!5m2!1sen!2sus" loading="lazy"></iframe>
+
+        <div class="bg-overlay">
+            <div class="container">
+                <img src="{{cdn 'assets/img/ob-custom/logo-green.png'}}" class="sub-logo" alt="" />
+                
+                <h1 class="page-heading ob-heading-xl ob-text-white">
+                    SUBSCRIBE TO GET EXCLUSIVE DEALS & UPDATES ON THE NEW CHERRY CREEK KITCHEN
+                </h1>
+
+                <p class="ob-paragraph-lg ob-text-white">
+                    Enter your email below to get on our VIP Cherry Creek list.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

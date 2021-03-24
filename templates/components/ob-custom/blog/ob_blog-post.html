@@ -1,0 +1,32 @@
+<article class="blog col-md-6 col-sm-6">
+    <div class="blog-post-wrapper">
+        <div class="blog-post-figure">
+            {{#if post.thumbnail}}
+            <a href="{{post.url}}">
+                <img src="{{getImage thumbnail 'gallery' 'blog_size-new'}}" alt="{{thumbnail.alt}}">
+            </a>
+            {{else}}
+            <a href="{{post.url}}" class="no-thumbnail">
+                <img src="{{cdn 'assets/img/ob-custom/logo-blue.png'}}" alt="" />
+            </a>
+            {{/if}}
+        </div>
+
+        {{#if post.tags}}
+        <ul class="tags">
+            {{#each post.tags}}
+            <li class="tag">
+                <a href="{{url}}">{{name}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+
+        <div class="blog-post-body">
+            <header class="blog-header">
+                <h2 class="ob-heading-sm"><a href="{{post.url}}">{{post.title}}</a></h2>
+                <p class="blog-date">Posted {{post.date_published}}</p>
+            </header>
+        </div>
+    </div>
+</article>

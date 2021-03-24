@@ -1,0 +1,203 @@
+.productView-description {
+  margin-top: 20px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.productView-product {
+  padding-bottom: 0;
+  border: none;
+}
+
+.productView-details.product-data {
+  order: 1;
+}
+.productView-details.product-options {
+  order: 2;
+}
+
+.charlesprice th,
+.charlesprice th p {
+  color: $ob-dark-green;
+}
+.charlesprice th {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.charlesprice th p {
+  font-size: 32px;
+  margin-top: 15px;
+
+  &.highlighted-price {
+    color: $ob-light-green;
+    font-weight: 800;
+  }
+}
+
+.productView-rating a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+#add-to-cart-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include breakpoint("small") {
+    justify-content: space-between;
+  }
+  @include breakpoint("medium") {
+    flex-wrap: nowrap;
+  }
+
+  .form-field {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      display: inline-flex;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    .form-increment {
+      display: inline-flex;
+
+      button {
+        background: $ob-blue;
+        color: $ob-light-green;
+        border: 1px solid $ob-blue;
+
+        svg {
+          max-width: 25px;
+          max-height: 25px;
+          margin-left: 0;
+          fill: $ob-light-green;
+        }
+      }
+      input {
+        border: 1px solid $ob-gray;
+      }
+    }
+  }
+  .alertBox {
+    display: none!important;
+  }
+  .form-action {
+    display: inline-flex;
+    margin-left: 0;
+    margin-top: 0;
+    float: right;
+    width: 100%;
+
+    @include breakpoint("small") {
+      width: auto;
+      margin-left: 15px;
+    }
+
+    input {
+      margin: 0;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+.products-facts {
+  margin-bottom: 50px;
+}
+.performance-facts {
+  border: 1px solid black;
+  float: left;
+  width: 100%;
+  padding: 0.5rem;    
+  padding-bottom:10px;
+}
+.performance-facts table {
+  border-collapse: collapse;
+}
+
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+}
+.performance-facts__header p {
+  margin: 0;
+}
+.performance-facts__header h1 {
+  line-height: 35px;
+}
+
+.performance-facts__table, .performance-facts__table--small, .performance-facts__table--grid {
+  width: 100%;
+}
+.performance-facts__table thead tr th, .performance-facts__table--small thead tr th, .performance-facts__table--grid thead tr th, .performance-facts__table thead tr td, .performance-facts__table--small thead tr td, .performance-facts__table--grid thead tr td {
+  border: 0;
+}
+.performance-facts__table th, .performance-facts__table--small th, .performance-facts__table--grid th, .performance-facts__table td, .performance-facts__table--small td, .performance-facts__table--grid td {
+  font-weight: normal;
+  text-align: left;
+  padding: 0.25rem 0;
+  border-top: 1px solid black;
+  white-space: nowrap;
+}
+.performance-facts__table td:last-child, .performance-facts__table--small td:last-child, .performance-facts__table--grid td:last-child {
+  text-align: right;
+}
+.performance-facts__table .blank-cell, .performance-facts__table--small .blank-cell, .performance-facts__table--grid .blank-cell {
+  width: 1rem;
+  border-top: 0;
+}
+.performance-facts__table .thick-row th, .performance-facts__table--small .thick-row th, .performance-facts__table--grid .thick-row th, .performance-facts__table .thick-row td, .performance-facts__table--small .thick-row td, .performance-facts__table--grid .thick-row td {
+  border-top-width: 5px;
+}
+
+.performance-facts__table--small {
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+}
+.performance-facts__table--small thead tr {
+  border-bottom: 1px solid black;
+}
+.performance-facts__table--small td:last-child {
+  text-align: left;
+}
+.performance-facts__table--small th, .performance-facts__table--small td {
+  border: 0;
+  padding: 0;
+}
+
+.performance-facts__table--grid {
+  margin: 0 0 0.5rem 0;
+}
+.performance-facts__table--grid td:last-child {
+  text-align: left;
+}
+.performance-facts__table--grid td:last-child::before {
+  content: "•";
+  font-weight: bold;
+  margin: 0 0.25rem 0 0;
+}
+
+#tab-related,
+#tab-similar {
+  padding: 0 50px;
+
+  .carousel-tooltip {
+    display: none!important;
+  }
+}
+
+#tab-related {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,41 @@
+{{#partial "page"}}
+
+<style>
+    .body {
+        margin: 0;
+    }
+    .body > .container {
+        max-width: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="main full faqs">
+    <div class="ob-content-panel hero">
+        <div class="bg-overlay">
+            <div class="container">
+                <h3 class="ob-heading-sm ob-text-white">MFF FAQS</h3>
+                <h1 class="ob-heading-xl ob-text-white">WE'RE HERE TO HELP</h1>
+                <p class="ob-paragraph-md ob-text-white">Have more questions? Don't hesitate to call or stop into one of our locations if you don't find the answers to your questions here.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container faq-container">
+        <div class="faq-category">
+            <h2 class="ob-heading-md">General</h2>
+            {{> components/ob-custom/faq/faq-general}}
+        </div>
+        <div class="faq-category">
+            <h2 class="ob-heading-md">Delivery</h2>
+            {{> components/ob-custom/faq/faq-delivery}}
+        </div>
+        <div class="faq-category">
+            <h2 class="ob-heading-md">DIETARY RESTRICTIONS & ALLERGIES</h2>
+            {{> components/ob-custom/faq/faq-dietary}}
+        </div>
+    </div>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}
