@@ -288,21 +288,6 @@ const satelliteLocationDefaults = [
     }
   },
   {
-    id: 25,
-    input_id: "forge",
-    name: "The Forge Fitness",
-    address: "1459 E Baseline St, Cornelius, OR 97113",
-    hours: {
-      Monday: "4:00pm - 6:00pm",
-      Tuesday: "",
-      Wednesday: "",
-      Thursday: "",
-      Friday: "",
-      Saturday: "",
-      Sunday: ""
-    }
-  },
-  {
     id: 26,
     input_id: "thornton",
     name: "Thornton Police Department",
