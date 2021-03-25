@@ -479,19 +479,6 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-cimmeria" name="pickup" value="Crossfit Cimmeria">
-      <label for="pickup-cimmeria"> <span style="font-weight:600">Crossfit Cimmeria</span>
-        <label class="collapse" for="_8">hours</label>
-        <input id="_8" type="checkbox">
-        <div class="extra-info">
-          <p> 2425 NW Birdsdale Ave, Gresham, OR 97030</p>
-          <p>Store hours
-            <br>Monday: 3:30pm - 6:30pm </p>
-          <p>Please place orders before 2:15pm for next-day pickup</p>
-        </div>
-      </label>
-    </div>
-    <div class="label-input-container">
       <input type="radio" id="pickup-dragonfire" name="pickup" value="Crossfit Dragonfire">
       <label for="pickup-dragonfire"> <span style="font-weight:600">Crossfit Dragonfire</span>
         <label class="collapse" for="_9">hours</label>
