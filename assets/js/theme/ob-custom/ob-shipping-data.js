@@ -340,7 +340,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Department Academy">
+      <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Dept. Academy">
       <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Department Academy</span>
         <label class="collapse" for="_15">hours</label>
         <input id="_15" type="checkbox">
@@ -368,7 +368,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Department">
+      <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Dept.">
       <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Department</span>
         <label class="collapse" for="_17">hours</label>
         <input id="_17" type="checkbox">
@@ -437,7 +437,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Department Substation">
+      <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Dept. Substation">
       <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Department Substation</span>
         <label class="collapse" for="_81">hours</label>
         <input id="_81" type="checkbox">
