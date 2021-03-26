@@ -96,14 +96,14 @@
 						}
 
 						&:hover {
-							color: $ob-orange;
+							color: $ob-light-green;
 						}
 
 						&:after {
 						    content: "";
 						    display: block;
 						    width: 0%;
-						    border-bottom: 2px solid $ob-light-green;
+						    border-bottom: 2px solid $ob-orange;
 						    transition: .5s;
 						    text-align: center;
 						    margin: 0 auto;
