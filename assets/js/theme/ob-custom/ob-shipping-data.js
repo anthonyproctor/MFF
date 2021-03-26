@@ -518,19 +518,6 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-gresham" name="pickup" value="OrangeTheory Gresham">
-      <label for="pickup-gresham"> <span style="font-weight:600">OrangeTheory Gresham</span>
-        <label class="collapse" for="_18">hours</label>
-        <input id="_18" type="checkbox">
-        <div class="extra-info">
-          <p>697 NW Division St, Gresham, OR 97030</p>
-          <p>Store hours
-            <br>Monday: 3:30pm - 6:30pm</p>
-          <p>Please place orders before 2:15pm for next-day pickup</p>
-        </div>
-      </label>
-    </div>
-    <div class="label-input-container">
       <input type="radio" id="pickup-hazel" name="pickup" value="OrangeTheory Hazel Dell">
       <label for="pickup-hazel"> <span style="font-weight:600">OrangeTheory Hazel Dell</span>
         <label class="collapse" for="_89">hours</label>
@@ -539,19 +526,6 @@ label.collapse {
           <p>7902 NE 6th Ave, Unit 104, Vancouver, WA 98665</p>
           <p>Store hours
             <br>Wednesday: 1:00pm - 3:00pm</p>
-          <p>Please place orders before 2:15pm for next-day pickup</p>
-        </div>
-      </label>
-    </div>
-    <div class="label-input-container">
-      <input type="radio" id="pickup-otf-orenco" name="pickup" value="OrangeTheory Orenco Station">
-      <label for="pickup-otf-orenco"> <span style="font-weight:600">OrangeTheory Orenco Station</span>
-        <label class="collapse" for="_21">hours</label>
-        <input id="_21" type="checkbox">
-        <div class="extra-info">
-          <p>395 Beavercreek Rd, Oregon City, OR 97045</p>
-          <p>Store hours
-            <br>Monday: 3:30pm - 6:30pm </p>
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
@@ -568,22 +542,6 @@ label.collapse {
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
-    </div>
-    <!---
-    <div class="label-input-container">
-      <input type="radio" id="pickup-forge" name="pickup" value="The Forge Fitness">
-      <label for="pickup-forge"> <span style="font-weight:600">The Forge Fitness</span>
-        <label class="collapse" for="_25">hours</label>
-        <input id="_25" type="checkbox">
-        <div class="extra-info">
-          <p>1459 E Baseline St, Cornelius, OR 97113</p>
-          <p>Store hours
-            <br>Monday: 4:00pm - 6:00pm</p>
-          <p>Please place orders before 2:15pm for next-day pickup</p>
-        </div>
-      </label>
-    </div>
-    --->
     </div>
   </div>
   <div id="calendar-section" class="hidden-section">
@@ -780,20 +738,6 @@ const calendarConfig = {
     altInput: true,
     altFormat: "F j, Y",
   },
-  ["pickup-cimmeria"]: {
-    disable: [
-      disableBlockedDates,
-      disableTuesdays,
-      disableWednesdays,
-      disableThursdays,
-      disableFridays,
-      disableSaturdays,
-      disableSundays
-    ],
-    minDate: checkCutoffDaily(getCurrentMomentPacific()),
-    altInput: true,
-    altFormat: "F j, Y",
-  },
   ["pickup-dragonfire"]: {
     disable: [
       disableBlockedDates,
@@ -888,21 +832,7 @@ const calendarConfig = {
     altInput: true,
     altFormat: "F j, Y",
   },
-  ["pickup-gresham"]: {
-    disable: [
-      disableBlockedDates,
-      disableTuesdays,
-      disableWednesdays,
-      disableThursdays,
-      disableFridays,
-      disableSaturdays,
-      disableSundays
-    ],
-    minDate: checkCutoffDaily(getCurrentMomentPacific()),
-    altInput: true,
-    altFormat: "F j, Y",
-  },
-    ["pickup-pfb"]: {
+  ["pickup-pfb"]: {
     disable: [
       disableBlockedDates,
       disableMondays,
@@ -941,20 +871,6 @@ const calendarConfig = {
       disableSundays
     ],
     minDate: checkCutoffDaily(getCurrentMomentPacific()),
-    altInput: true,
-    altFormat: "F j, Y",
-  },
-  ["pickup-otf-orenco"]: {
-    disable: [
-      disableBlockedDates,
-      disableTuesdays,
-      disableWednesdays,
-      disableThursdays,
-      disableFridays,
-      disableSaturdays,
-      disableSundays
-    ],
-    minDate: checkCutoffDaily(getCurrentMomentMountain()),
     altInput: true,
     altFormat: "F j, Y",
   },

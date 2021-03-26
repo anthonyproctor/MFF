@@ -93,21 +93,6 @@ const satelliteLocationDefaults = [
     }
   },
   {
-    id: 8,
-    input_id: "cimmeria",
-    name: "Crossfit Cimmeria",
-    address: "2425 NW Birdsdale Ave, Gresham, OR 97030",
-    hours: {
-      Monday: "3:30pm - 6:30pm",
-      Tuesday: "",
-      Wednesday: "",
-      Thursday: "",
-      Friday: "",
-      Saturday: "",
-      Sunday: ""
-    }
-  },
-  {
     id: 9,
     input_id: "dragonfire",
     name: "Crossfit Dragonfire",
@@ -249,36 +234,6 @@ const satelliteLocationDefaults = [
     address: "4243 E 136th Ave, Thornton, CO 80602",
     hours: {
       Monday: "12:00pm - 3:00pm",
-      Tuesday: "",
-      Wednesday: "",
-      Thursday: "",
-      Friday: "",
-      Saturday: "",
-      Sunday: ""
-    }
-  },
-  {
-    id: 18,
-    input_id: "gresham",
-    name: "OrangeTheory Gresham",
-    address: "697 NW Division St, Gresham, OR 97030",
-    hours: {
-      Monday: "3:30pm - 6:30pm",
-      Tuesday: "",
-      Wednesday: "",
-      Thursday: "",
-      Friday: "",
-      Saturday: "",
-      Sunday: ""
-    }
-  },
-  {
-    id: 21,
-    input_id: "otf-orenco",
-    name: "OrangeTheory Orenco Station",
-    address: "395 Beavercreek Rd, Oregon City, OR 97045",
-    hours: {
-      Monday: "3:30pm - 6:30pm",
       Tuesday: "",
       Wednesday: "",
       Thursday: "",
