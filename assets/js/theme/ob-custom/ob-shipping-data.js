@@ -556,6 +556,22 @@ label.collapse {
         </div>
       </label>
     </div>
+    <!---
+    <div class="label-input-container">
+      <input type="radio" id="pickup-forge" name="pickup" value="The Forge Fitness">
+      <label for="pickup-forge"> <span style="font-weight:600">The Forge Fitness</span>
+        <label class="collapse" for="_25">hours</label>
+        <input id="_25" type="checkbox">
+        <div class="extra-info">
+          <p>1459 E Baseline St, Cornelius, OR 97113</p>
+          <p>Store hours
+            <br>Monday: 4:00pm - 6:00pm</p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    --->
+    </div>
   </div>
   <div id="calendar-section" class="hidden-section">
     <h4> Step 3: Select Date </h4>
