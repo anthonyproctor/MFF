@@ -340,7 +340,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Department Academy">
+      <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Dept. Academy">
       <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Department Academy</span>
         <label class="collapse" for="_15">hours</label>
         <input id="_15" type="checkbox">
@@ -368,7 +368,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Department">
+      <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Dept.">
       <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Department</span>
         <label class="collapse" for="_17">hours</label>
         <input id="_17" type="checkbox">
@@ -437,7 +437,7 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Department Substation">
+      <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Dept. Substation">
       <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Department Substation</span>
         <label class="collapse" for="_81">hours</label>
         <input id="_81" type="checkbox">
@@ -513,6 +513,19 @@ label.collapse {
           <p>3589 Fairview Industrial Dr SE #100, Salem, OR 97302</p>
           <p>Store hours
             <br>Tuesday: 3:30pm - 6:30pm</p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
+      <input type="radio" id="pickup-wilsonville" name="pickup" value="Crossfit Wilsonville">
+      <label for="pickup-wilsonville"> <span style="font-weight:600">Crossfit Wilsonville</span>
+        <label class="collapse" for="_92">hours</label>
+        <input id="_92" type="checkbox">
+        <div class="extra-info">
+          <p>25589 SW Canyon Creek Rd STE 100, Wilsonville, OR 97070</p>
+          <p>Store hours
+            <br>Tuesday: 12:00pm - 3:00pm</p>
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
@@ -1119,6 +1132,20 @@ const calendarConfig = {
     disable: [
       disableBlockedDates,
       disableTuesdays,
+      disableWednesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-wilsonville"]: {
+    disable: [
+      disableBlockedDates,
+      disableMondays,
       disableWednesdays,
       disableThursdays,
       disableFridays,
