@@ -518,6 +518,19 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
+      <input type="radio" id="pickup-wilsonville" name="pickup" value="Crossfit Wilsonville">
+      <label for="pickup-wilsonville"> <span style="font-weight:600">Crossfit Wilsonville</span>
+        <label class="collapse" for="_92">hours</label>
+        <input id="_92" type="checkbox">
+        <div class="extra-info">
+          <p>25589 SW Canyon Creek Rd STE 100, Wilsonville, OR 97070</p>
+          <p>Store hours
+            <br>Tuesday: 12:00pm - 3:00pm</p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
       <input type="radio" id="pickup-hazel" name="pickup" value="OrangeTheory Hazel Dell">
       <label for="pickup-hazel"> <span style="font-weight:600">OrangeTheory Hazel Dell</span>
         <label class="collapse" for="_89">hours</label>
@@ -1119,6 +1132,20 @@ const calendarConfig = {
     disable: [
       disableBlockedDates,
       disableTuesdays,
+      disableWednesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-wilsonville"]: {
+    disable: [
+      disableBlockedDates,
+      disableMondays,
       disableWednesdays,
       disableThursdays,
       disableFridays,

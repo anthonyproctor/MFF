@@ -302,6 +302,21 @@ const satelliteLocationDefaults = [
       Sunday: ""
     }
   },
+  {
+    id: 92,
+    input_id: "cp-wilsonville",
+    name: "CF-Wilsonville",
+    address: "25589 SW Canyon Creek Rd STE 100, Wilsonville, OR 97070",
+    hours: {
+      Monday: "",
+      Tuesday: "12:00pm - 3:00pm",
+      Wednesday: "",
+      Thursday: "",
+      Friday: "",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
 ]
 
 const retailLocations = window.retailLocations 
