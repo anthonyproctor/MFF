@@ -332,6 +332,21 @@ const satelliteLocationDefaults = [
       Sunday: ""
     }
   },
+  {
+    id: 91,
+    input_id: "cp-arvada",
+    name: "CP - Arvada",
+    address: "5790 Yukon St, Arvada, Colorado 80002",
+    hours: {
+      Monday: "10:00am - 2:00pm",
+      Tuesday: "",
+      Wednesday: "",
+      Thursday: "",
+      Friday: "",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
 ]
 
 const retailLocations = window.retailLocations 
