@@ -299,6 +299,19 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
+      <input type="radio" id="pickup-cp-arvada" name="pickup" value="Core Progression Arvada">
+      <label for="pickup-cp-arvada"> <span style="font-weight:600">Core Progression Arvada</span>
+        <label class="collapse" for="_91">hours</label>
+        <input id="_91" type="checkbox">
+        <div class="extra-info">
+          <p>5790 Yukon St, Arvada, Colorado 80002</p>
+          <p>Store hours
+            <br>Monday: 10:00am - 2:00pm </p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
       <input type="radio" id="pickup-denver-jail" name="pickup" value="Denver County Jail">
       <label for="pickup-denver-jail"> <span style="font-weight:600">Denver County Jail</span>
         <label class="collapse" for="_12">hours</label>
@@ -1177,6 +1190,20 @@ const calendarConfig = {
       disableBlockedDates,
       disableMondays,
       disableTuesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-cp-arvada"]: {
+    disable: [
+      disableBlockedDates,
+      disableTuesdays,
+      disableWednesdays,
       disableThursdays,
       disableFridays,
       disableSaturdays,
