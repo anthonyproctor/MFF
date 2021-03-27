@@ -556,6 +556,19 @@ label.collapse {
         </div>
       </label>
     </div>
+    <div class="label-input-container">
+      <input type="radio" id="pickup-unleashed" name="pickup" value="Unleashed Fitness NW - Vancouver">
+      <label for="pickup-unleashed"> <span style="font-weight:600">Unleashed Fitness NW - Vancouver</span>
+        <label class="collapse" for="_90">hours</label>
+        <input id="_90" type="checkbox">
+        <div class="extra-info">
+          <p>7509 South 5th Street #101-F, Ridgefield, WA 98642</p>
+          <p>Store hours
+            <br>Wednesday: 1:00pm - 3:00pm </p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
     <!---
     <div class="label-input-container">
       <input type="radio" id="pickup-forge" name="pickup" value="The Forge Fitness">
@@ -1163,6 +1176,20 @@ const calendarConfig = {
       disableBlockedDates,
       disableMondays,
       disableWednesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-unleashed"]: {
+    disable: [
+      disableBlockedDates,
+      disableMondays,
+      disableTuesdays,
       disableThursdays,
       disableFridays,
       disableSaturdays,
