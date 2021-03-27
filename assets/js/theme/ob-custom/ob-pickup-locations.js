@@ -317,6 +317,21 @@ const satelliteLocationDefaults = [
       Sunday: ""
     }
   },
+  {
+    id: 90,
+    input_id: "cp-unleashed",
+    name: "Unleashed Fitness NW - Vancouver",
+    address: "7509 South 5th Street #101-F, Ridgefield, WA 98642",
+    hours: {
+      Monday: "",
+      Tuesday: "",
+      Wednesday: "1:00pm - 3:00pm",
+      Thursday: "",
+      Friday: "",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
 ]
 
 const retailLocations = window.retailLocations 
