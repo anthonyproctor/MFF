@@ -237,6 +237,10 @@
     }
 }
 
+.navPages-action:active {
+    color: #64be6b;
+}
+
 .navPages-action--storeCredit {
     color: stencilColor("color-textSecondary");
 }
