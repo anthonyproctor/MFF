@@ -332,6 +332,21 @@ const satelliteLocationDefaults = [
       Sunday: ""
     }
   },
+  {
+    id: 92,
+    input_id: "burn",
+    name: "Burn Boot Camp",
+    address: "3333 S Wadsworth Blvd, Lakewood, CO 80227",
+    hours: {
+      Monday: "",
+      Tuesday: "10:00pm - 4:00pm",
+      Wednesday: "",
+      Thursday: "",
+      Friday: "10:00pm - 4:00pm",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
 ]
 
 const retailLocations = window.retailLocations 

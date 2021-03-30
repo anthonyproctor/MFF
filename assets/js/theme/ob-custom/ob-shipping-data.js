@@ -182,7 +182,8 @@ label.collapse {
             <br>Monday - Thursday: 8am - 8pm
             <br>Friday: 8am - 6pm
             <br>Saturday: 9am - 6pm
-            <br>Sunday: 10am - 8pm </p>
+            <br>Sunday: 10am - 8pm 
+          </p>
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
@@ -255,6 +256,21 @@ label.collapse {
           <p>Store hours
             <br>Tuesday: 2:00pm - 8:00pm
             <br>Friday: 2:00pm - 8:00pm </p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
+      <input type="radio" id="pickup-burn" name="pickup" value="Burn Boot Camp">
+      <label for="pickup-burn"> <span style="font-weight:600">Burn Boot Camp</span>
+        <label class="collapse" for="_92">hours</label>
+        <input id="_92" type="checkbox">
+        <div class="extra-info">
+          <p>3333 S Wadsworth Blvd, Lakewood, CO 80227</p>
+          <p>Store hours
+            <br>Tuesday: 10:00pm - 4:00pm
+            <br>Friday: 10:00pm - 4:00pm 
+          </p>
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
@@ -1192,6 +1208,19 @@ const calendarConfig = {
       disableTuesdays,
       disableThursdays,
       disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-burn"]: {
+    disable: [
+      disableBlockedDates,
+      disableMondays,
+      disableWednesdays,
+      disableThursdays,
       disableSaturdays,
       disableSundays
     ],
