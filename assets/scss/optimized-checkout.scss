@@ -411,6 +411,8 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label,
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--postCode > div > label,
 #checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--postCode > div > label,
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label,
+#checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label,
 #checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label,
 #checkout-app > div > div > div > div > ol > li.checkout-step.optimizedCheckout-checkoutStep.checkout-step--payment > div.checkout-view-content.checkout-view-content-enter-done > div > div > form > fieldset:nth-child(1) > legend
 {
@@ -422,7 +424,9 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--postCode > div > label:after,
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label:after,
 #checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--postCode > div > label:after,
-#checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label:after
+#checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label:after,
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after,
+#checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after,
  {
     visibility: visible;
     position: absolute;
@@ -442,6 +446,12 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
 #checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--provinceCode > div > label:after {
     content: "State";
 }
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after,
+#checkoutBillingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after {
+    content: "Delivery Notes";
+}
+
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label 
 
 // Info Banner
 .ob-checkoutInfoBanner {
@@ -452,18 +462,5 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
 .ob-hidden {
   display: none;
 }
-
-#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label 
-{
- visibility: hidden;
-    position: relative;
-}
-
-#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after
-
-{
- content:"Delivery notes";
-}
-
 
 
