@@ -453,3 +453,17 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
   display: none;
 }
 
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label 
+{
+    display:none;
+
+}
+
+#checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after
+
+{
+ content:"Delivery notes";
+}
+
+
+
