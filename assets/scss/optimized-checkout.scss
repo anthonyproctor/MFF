@@ -455,8 +455,8 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
 
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label 
 {
-    display:none;
-
+ visibility: hidden;
+    position: relative;
 }
 
 #checkoutShippingAddress > div > div > fieldset > div > div > div.dynamic-form-field.dynamic-form-field--company > div > label:after
