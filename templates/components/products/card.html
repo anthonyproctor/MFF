@@ -1,5 +1,8 @@
 <article class="card {{#if alternate}}card--alternate{{/if}}" {{#if settings.data_tag_enabled}} data-event-type="{{event}}" data-entity-id="{{id}}" data-position="{{position}}" data-name="{{name}}" data-product-category="{{#each category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{brand.name}}" data-product-price="{{#if price.with_tax}}{{price.with_tax.value}}{{else}}{{price.without_tax.value}}{{/if}}"  {{/if}}>
     <figure class="card-figure">
+        <div class="added-to-cart-icon">
+            <svg><use xlink:href="#icon-ob-checkmark"></use></svg>
+        </div>
         {{#or price.sale_price_with_tax.value price.sale_price_without_tax.value}}
             {{#if theme_settings.product_sale_badges '===' 'sash'}}
                 <div class="sale-flag-sash">
@@ -29,13 +32,6 @@
                     </div>
                     {{/if}}
                 {{/if}}
-                {{#if name '===' 'High Protein'}}
-                    {{#if value '===' 'Yes'}}
-                    <div class="sale-flag-side sale-flag-side--custom" style="background-color:#c0ca7f; color:#67803b; text-transform:uppercase; font-weight:600;">
-                        <span style="color:#67803b;" class="sale-text">High Protein</span>
-                    </div>
-                    {{/if}}
-                {{/if}}
                 {{#if name '===' 'New'}}
                     {{#if value '===' 'Yes'}}
                     <div class="sale-flag-side sale-flag-side--custom" style="background-color:#67803b; color:#c0ca7f; text-transform:uppercase; font-weight:600; ">
@@ -46,7 +42,7 @@
                 {{#if name '===' 'Low Carb'}}
                     {{#if value '===' 'No'}}
                     <div class="sale-flag-side sale-flag-side--custom" style="background-color:#f0e4b2; color:#67803b; text-transform:uppercase; font-weight:600; ">
-                        <span style="color:#67803b;" class="sale-text">Low Glycemic Carbs</span>
+                        <span style="color:#67803b;" class="sale-text">Low Glycemic Carb</span>
                     </div>
                     {{/if}}
                 {{/if}}
