@@ -4,8 +4,6 @@ import compareProducts from './global/compare-products';
 import FacetedSearch from './common/faceted-search';
 import { createTranslationDictionary } from '../theme/common/utils/translations-utils';
 
-import catAddCart from './ob-custom/ob-category-add-cart';
-
 export default class Category extends CatalogPage {
     constructor(context) {
         super(context);
@@ -48,8 +46,6 @@ export default class Category extends CatalogPage {
         $('a.reset-btn').on('click', () => this.setLiveRegionsAttributes($('span.reset-message'), 'status', 'polite'));
 
         this.ariaNotifyNoProducts();
-
-        catAddCart();
     }
 
     ariaNotifyNoProducts() {
