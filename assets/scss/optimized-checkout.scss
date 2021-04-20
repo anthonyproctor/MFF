@@ -463,4 +463,16 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
   display: none;
 }
 
+#checkout-payment-continue {
+    opacity: .3;
+    z-index: -1;
+}
+#checkout-payment-continue.loaded {
+    opacity: 1;
+    z-index: 1;
+    transition: .25s;
+}
 
+.stepHeader-body {
+    margin-top: 3.76923rem !important;
+}

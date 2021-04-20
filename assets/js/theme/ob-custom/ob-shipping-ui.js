@@ -54,6 +54,8 @@ function showSection(method) {
     toggleSectionVisibility(deliverySectionSelector, 'show')
   } else if (method === 'Oregon,') {
     toggleSectionVisibility(deliverySectionSelector, 'show')
+  } else if (method === 'Houston,') {
+    toggleSectionVisibility(deliverySectionSelector, 'show')
   } else if (method === 'Texas,') {
     toggleSectionVisibility(deliverySectionSelector, 'show')
   }
@@ -102,6 +104,10 @@ function generateCachedStateElement(state) {
       .appendTo($container);
   }
   if (state.shippingMethod === 'Texas,' && state.time) {
+    $(`<div class="cached-line-item shipping-time">Time: ${state.time}</div>`)
+      .appendTo($container);
+  }
+  if (state.shippingMethod === 'Houston,' && state.time) {
     $(`<div class="cached-line-item shipping-time">Time: ${state.time}</div>`)
       .appendTo($container);
   }

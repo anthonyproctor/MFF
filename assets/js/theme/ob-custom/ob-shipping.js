@@ -257,7 +257,17 @@ function handleZipCodeVerification(event) {
       buildCalendar('Oregon,');
       toggleSectionVisibility(deliveryTimeGroupSelector, 'show');
     }
+    else if (state.shippingMethod === 'Houston,'){
 
+      state.zipCode = zipCode;
+
+      setZipCodeButtonMessage("Zip Code Accepted");
+      setZipCodeValidationMessage(zipCodeValidationMessages.success, 'success');
+      $(zipCodeButtonSelector).addClass('success');
+
+      buildCalendar('Houston,');
+      toggleSectionVisibility(deliveryTimeGroupSelector, 'show');
+    }
   } else {
 
     setZipCodeButtonMessage("Verify Zip Code");
@@ -279,6 +289,7 @@ function handlePickupLocationChange(event) {
   const id = $currentRadioInput.attr('id');
   const choice = event.target.value;
   destroyCalendar();
+  console.log("Calender id - "+id);
   buildCalendar(id);
   state.pickupLocationFull = choice;
   state.pickupLocationShort = id;
@@ -322,7 +333,9 @@ function validateState(state) {
     setCheckoutValidationMessage(`Please select a delivery time.`, "error");
   } else if (state.shippingMethod === 'Oregon,' && !state.time) {
     setCheckoutValidationMessage(`Please select a delivery time.`, "error");
-  } else {
+  }else if (state.shippingMethod === 'Houston,' && !state.time) {
+    setCheckoutValidationMessage(`Please select a delivery time.`, "error");
+  }  else {
 
     return true;
   }
