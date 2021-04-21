@@ -107,8 +107,8 @@ label.collapse {
   <button class="shipping-method-choice-button" data-method="Oregon,">
     Delivery - Oregon
   </button>
-<button class="shipping-method-choice-button" data-method="Houston,">
-    Delivery - Houston
+<button class="shipping-method-choice-button" >
+    Coming Soon
   </button>
   <!--
     <button class="shipping-method-choice-button" data-method="Shipping">	
@@ -131,7 +131,7 @@ label.collapse {
   <h5 class="separator">Retail Locations</h5>
   <div class="pickup-radio-group">
     <div class="label-input-container">
-        <input type="radio" id="pickup-beaverton" name="pickup" value="My Fit Foods pickup-houston">
+        <input type="radio" id="pickup-houston" name="pickup" value="My Fit Foods Houston">
         <label for="pickup-houston"> <span style="font-weight:600">My Fit Foods Houston</span>
             <label class="collapse" for="_95">hours</label>
             <input id="_95" type="checkbox">
@@ -1030,7 +1030,7 @@ const calendarConfig = {
     disable: [
       disableBlockedDates,
     ],
-    minDate: checkCutoffDailyALTERNATE(getCurrentMomentCentral()),
+    minDate: '2021-05-02',
     altInput: true,
     altFormat: "F j, Y",
   },
