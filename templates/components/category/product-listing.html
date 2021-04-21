@@ -25,3 +25,13 @@
         {{lang 'categories.no_products'}}
     </p>
 {{/if}}
+<script data-cfasync="false">
+window.ccLayer = window.ccLayer || [];
+  ccLayer.push({
+  ccEvent: 'categoryViewed',
+  src: 'custom',
+  id: '{{category.id}}',
+  name: '{{category.name}}',
+  url: '{{category.url}}',
+});
+</script>

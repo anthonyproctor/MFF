@@ -1,5 +1,20 @@
 const retailLocationDefaults = [
-  {
+    {
+      id: 0,
+      input_id: "houston",
+      name: "My Fit Foods Houston",
+      address: "",
+      hours: {
+        Monday: "7am - 8pm",
+        Tuesday: "7am - 8pm",
+        Wednesday: "7am - 8pm",
+        Thursday: "7am - 8pm",
+        Friday: "7am - 6pm",
+        Saturday: "9am - 6pm",
+        Sunday: "10am - 8pm"
+      }
+    },
+	 {
     id: 1,
     input_id: "beaverton",
     name: "My Fit Foods Beaverton",
@@ -185,7 +200,7 @@ const satelliteLocationDefaults = [
   {
     id: 15,
     input_id: "denver-academy",
-    name: "Denver Sheriff’s Department Academy",
+    name: "Denver Sheriff’s Dept Academy",
     address: "5440 Roslyn St, Denver, CO 80216",
     hours: {
       Monday: "",
@@ -215,7 +230,7 @@ const satelliteLocationDefaults = [
   {
     id: 17,
     input_id: "douglas-sheriff",
-    name: "Douglas County Sheriff’s Department",
+    name: "Douglas County Sheriff’s Dept",
     address: "4000 Justice Way, Castle Rock, CO 80109",
     hours: {
       Monday: "",
@@ -245,7 +260,7 @@ const satelliteLocationDefaults = [
   {
     id: 26,
     input_id: "thornton",
-    name: "Thornton Police Department",
+    name: "Thornton Police Dept",
     address: "9551 Civic Center Dr, Thornton, CO 80229",
     hours: {
       Monday: "12:00pm - 3:00pm",
@@ -260,7 +275,7 @@ const satelliteLocationDefaults = [
   {
     id: 27,
     input_id: "thornton-sub",
-    name: "Thornton Police Department Substation",
+    name: "Thornton Police Dept Substation",
     address: "13150 Quebec St, Thornton, CO. 80602",
     hours: {
       Monday: "12:00pm - 3:00pm",
@@ -303,9 +318,9 @@ const satelliteLocationDefaults = [
     }
   },
   {
-    id: 92,
-    input_id: "cp-wilsonville",
-    name: "CF-Wilsonville",
+    id: 93,
+    input_id: "pickup-wilsonville",
+    name: "Crossfit Wilsonville",
     address: "25589 SW Canyon Creek Rd STE 100, Wilsonville, OR 97070",
     hours: {
       Monday: "",
@@ -343,6 +358,21 @@ const satelliteLocationDefaults = [
       Wednesday: "",
       Thursday: "",
       Friday: "10:00pm - 4:00pm",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
+  {
+    id: 94,
+    input_id: "pickup-cp-broadway",
+    name: "Core Progression S. Broadway",
+    address: "2565 S Broadway, Denver, CO 80210",
+    hours: {
+      Monday: "10:00pm - 4:00pm",
+      Tuesday: "",
+      Wednesday: "10:00pm - 4:00pm",
+      Thursday: "",
+      Friday: "",
       Saturday: "",
       Sunday: ""
     }

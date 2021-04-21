@@ -25,6 +25,7 @@ export default class Checkout extends PageManager {
     if (!this.checkoutState) {
       console.error("[Warning]: Pickup/Delivery Customization not properly persisting data for this customer.")
       return false;
+
     }
 
     return true
@@ -38,12 +39,12 @@ export default class Checkout extends PageManager {
   onReady() {
     // Cart icon clicks take you directly to the cart page
     $('[data-cart-preview]').on('click', (event) => window.location.href = '/cart.php');
-
     const valid = this.getCachedCheckoutState();
     
     if (!valid) {
       // Return early if there is no checkout state properly configured.
       console.error("Checkout state improperly configured..")
+		$('[name="orderComment"]').val("empty");
       return;
     }
     if (valid && this.checkoutState.shippingMethod == 'Shipping') {
@@ -67,7 +68,7 @@ export default class Checkout extends PageManager {
     window.listenForMutations('#checkout-app', async function(element) {
       const cartResponse = await axios.get('/api/storefront/carts/');
       that.checkoutID = cartResponse.data[0].id;
-
+	  
       if (that.checkoutState) {
         const stateString = that.generateShippingString(that.checkoutState);
         const checkoutUpdateURL =  `/api/storefront/checkouts/${that.checkoutID }`;
@@ -101,6 +102,7 @@ export default class Checkout extends PageManager {
 
     // By passing in 'true', we will listen for every. single. mutation. on the shipping options container.
     window.listenForMutations('#checkout-shipping-options .shippingOptions-container', function(element){
+		
       if ($('.dropdownMenu').length) return // Return early to prevent constant mutations.
 
       let { checkoutState: { shippingMethod } } = that;

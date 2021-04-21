@@ -22,13 +22,13 @@
                 </li>
             {{/if}}
         {{/if}}
-        {{#if account_page '===' 'messages'}}
+        <!--{{#if account_page '===' 'messages'}}
             <li class="navBar-item is-active">{{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</li>
         {{else}}
             <li class="navBar-item">
                 <a class="navBar-action" href="{{urls.account.inbox}}">{{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</a>
             </li>
-        {{/if}}
+        {{/if}}-->
         {{#if account_page '===' 'addresses'}}
             <li class="navBar-item is-active">{{lang 'account.nav.addresses'}}</li>
         {{else}}

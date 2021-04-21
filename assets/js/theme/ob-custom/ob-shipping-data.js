@@ -24,11 +24,6 @@ GSheetProcessor(options, results => {
   });
 });
 
-
-console.log(stores);
-console.log(stores.length);
-console.log(stores[0]);
-
 const shippingModalHTML = `
 <style>
 .separator {
@@ -124,6 +119,20 @@ label.collapse {
   <h5 class="separator">Retail Locations</h5>
   <div class="pickup-radio-group">
     <div class="label-input-container">
+      <input type="radio" id="pickup-houston" name="pickup" value="My Fit Foods Houston">
+      <label for="pickup-beaverton"> <span style="font-weight:600">My Fit Foods Houston</span>
+        <label class="collapse" for="_0">hours</label>
+        <input id="_0" type="checkbox">
+        <div class="extra-info">
+          <p>Store hours
+            <br>Monday - Thursday: 7am - 8pm
+            <br>Friday: 7am - 6pm
+            <br>Saturday: 9am - 6pm
+            <br>Sunday: 10am - 8pm </p>
+        </div>
+      </label>
+    </div>
+	<div class="label-input-container">
       <input type="radio" id="pickup-beaverton" name="pickup" value="My Fit Foods Beaverton">
       <label for="pickup-beaverton"> <span style="font-weight:600">My Fit Foods Beaverton</span>
         <label class="collapse" for="_1">hours</label>
@@ -147,7 +156,7 @@ label.collapse {
         <div class="extra-info">
           <p>8101 Belleview Ave #w-2, Denver, CO 80237</p>
           <p>Store hours
-            <br>Monday - Thursday: 7am - 8pm
+            <br>Monday - Wednesday: 7am - 8pm
             <br>Friday: 7am - 7pm
             <br>Saturday: 8am - 6pm
             <br>Sunday: 10am - 8pm </p>
@@ -302,6 +311,20 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
+      <input type="radio" id="pickup-cp-broadway" name="pickup" value="Core Progression S. Broadway">
+      <label for="pickup-cp-broadway"> <span style="font-weight:600">Core Progression S. Broadway</span>
+        <label class="collapse" for="_7">hours</label>
+        <input id="_7" type="checkbox">
+        <div class="extra-info">
+          <p>2565 S Broadway, Denver, CO 80210</p>
+          <p>Store hours
+            <br>Monday: 10:00am - 4:00pm
+            <br>Wednesday: 10:00am - 4:00pm</p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
       <input type="radio" id="pickup-core-progression" name="pickup" value="Core Progression Northglenn">
       <label for="pickup-core-progression"> <span style="font-weight:600">Core Progression Northglenn</span>
         <label class="collapse" for="_7">hours</label>
@@ -357,7 +380,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Dept. Academy">
-      <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Department Academy</span>
+      <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Dept Academy</span>
         <label class="collapse" for="_15">hours</label>
         <input id="_15" type="checkbox">
         <div class="extra-info">
@@ -385,7 +408,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Dept.">
-      <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Department</span>
+      <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Dept</span>
         <label class="collapse" for="_17">hours</label>
         <input id="_17" type="checkbox">
         <div class="extra-info">
@@ -439,8 +462,8 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-thornton-po" name="pickup" value="Thornton Police Department">
-      <label for="pickup-thornton-po"> <span style="font-weight:600">Thornton Police Department</span>
+      <input type="radio" id="pickup-thornton-po" name="pickup" value="Thornton Police Dept">
+      <label for="pickup-thornton-po"> <span style="font-weight:600">Thornton Police Dept</span>
         <label class="collapse" for="_82">hours</label>
         <input id="_82" type="checkbox">
         <div class="extra-info">
@@ -454,7 +477,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Dept. Substation">
-      <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Department Substation</span>
+      <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Dept Substation</span>
         <label class="collapse" for="_81">hours</label>
         <input id="_81" type="checkbox">
         <div class="extra-info">
@@ -621,9 +644,7 @@ label.collapse {
 </div>
 `;
 
-const defaultZipCodes = [ 80002, 80003, 80004, 80005, 80010, 80011, 80012, 80013, 80014, 
-80015, 80016, 80017, 80018, 80019, 80020, 80021, 80022, 80023, 80030, 80031, 80033,
- 80045, 80104, 80108, 80109, 80110, 80111, 80112, 80113, 80116, 80120, 80121, 80122, 80123, 80124, 80125, 80126, 80127, 80128, 80129, 80130, 80134, 80138, 80202, 80203, 80204, 80205, 80207, 80209, 80210, 80211, 80212, 80214, 80215, 80216, 80218, 80219, 80220, 80221, 80222, 80223, 80224, 80226, 80227, 80228, 80229, 80230, 80231, 80232, 80233, 80234, 80235, 80236, 80237, 80238, 80239, 80241, 80246, 80247, 80249, 80260, 80401, 80419, 80601, 80602, 80603, 80640, 97002, 97003, 97005, 97006, 97007, 97008, 97009, 97011, 97013, 97015, 97017, 97022, 97024, 97027, 97028, 97030, 97034, 97035, 97036, 97045, 97049, 97053, 97056, 97060, 97062, 97067, 97068, 97070, 97075, 97076, 97077, 97078, 97079, 97080, 97086, 97089, 97111, 97113, 97114, 97124, 97125, 97128, 97129, 97133, 97137, 97140, 97148, 97201, 97202, 97203, 97204, 97205, 97206, 97207, 97208, 97209, 97210, 97211, 97212, 97213, 97214, 97215, 97216, 97217, 97218, 97219, 97220, 97221, 97222, 97223, 97224, 97225, 97227, 97228, 97229, 97230, 97231, 97232, 97233, 97236, 97238, 97239, 97240, 97242, 97256, 97258, 97266, 97267, 97268, 97269, 97280, 97281, 97282, 97283, 97286, 97290, 97291, 97292, 97293, 97294, 97296, 97298, 97301, 97302, 97304, 97305, 97306, 97308, 97309, 97310, 97311, 97312, 97314, 97317, 97362, 98607, 98660, 98661, 98662, 98663, 98664, 98665, 98666, 98668, 98682, 98683, 98684, 98685, 98686, 98687];
+const defaultZipCodes = [ 80002, 80003, 80004, 80005, 80010, 80011, 80012, 80013, 80014, 80015, 80016, 80017, 80018, 80019, 80020, 80021, 80022, 80023, 80030, 80031, 80033, 80045, 80104, 80108, 80109, 80110, 80111, 80112, 80113, 80116, 80120, 80121, 80122, 80123, 80124, 80125, 80126, 80127, 80128, 80129, 80130, 80134, 80138, 80202, 80203, 80204, 80205, 80207, 80209, 80210, 80211, 80212, 80214, 80215, 80216, 80218, 80219, 80220, 80221, 80222, 80223, 80224, 80226, 80227, 80228, 80229, 80230, 80231, 80232, 80233, 80234, 80235, 80236, 80237, 80238, 80239, 80241, 80246, 80247, 80249, 80260, 80401, 80419, 80601, 80602, 80603, 80640, 97002, 97003, 97005, 97006, 97007, 97008, 97009, 97011, 97013, 97015, 97017, 97022, 97024, 97027, 97028, 97030, 97034, 97035, 97036, 97045, 97049, 97053, 97056, 97060, 97062, 97067, 97068, 97070, 97075, 97076, 97077, 97078, 97079, 97080, 97086, 97089, 97111, 97113, 97114, 97124, 97125, 97128, 97129, 97133, 97137, 97140, 97148, 97201, 97202, 97203, 97204, 97205, 97206, 97207, 97208, 97209, 97210, 97211, 97212, 97213, 97214, 97215, 97216, 97217, 97218, 97219, 97220, 97221, 97222, 97223, 97224, 97225, 97227, 97228, 97229, 97230, 97231, 97232, 97233, 97236, 97238, 97239, 97240, 97242, 97256, 97258, 97266, 97267, 97268, 97269, 97280, 97281, 97282, 97283, 97286, 97290, 97291, 97292, 97293, 97294, 97296, 97298, 97301, 97302, 97304, 97305, 97306, 97308, 97309, 97310, 97311, 97312, 97314, 97317, 97362, 98607, 98660, 98661, 98662, 98663, 98664, 98665, 98666, 98668, 98682, 98683, 98684, 98685, 98686, 98687];
 
 let shippingZipCodes = window.shippingZipCodes ? window.shippingZipCodes : defaultZipCodes;
 
@@ -633,8 +654,13 @@ const zipCodeValidationMessages = {
   success: "Zip Code Verified, please select a date!"
 }
 
+function getAnthonyHoustonDay() {
+  const d = new Date('2021-05-06');
+  return d;
+}
 function getCurrentMomentMountain() {
-  return moment().tz('America/Denver')
+	
+	return moment().tz('America/Denver');
 }
 
 function getCurrentMomentPacific() {
@@ -717,6 +743,7 @@ const calendarConfig = {
   },
   ["pickup-denver"]: {
     disable: [
+    disableThursdays,
     disableSaturdays,
       disableBlockedDates
     ],
@@ -1230,8 +1257,28 @@ const calendarConfig = {
     altInput: true,
     altFormat: "F j, Y",
   },
+  ["pickup-houston"]: {
+    disable: [
+      disableBlockedDates
+    ],
+    minDate: getAnthonyHoustonDay(),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-cp-broadway"]: {
+    disable: [
+      disableBlockedDates,
+      disableTuesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
 }
-
 const shippingPluginSelectors = {
   shippingMethodButtonSelector: '.shipping-method-choice-button',
   pickupSectionSelector: '#pickup-selection',
