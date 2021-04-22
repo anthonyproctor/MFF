@@ -90,3 +90,134 @@
 // -----------------------------------------------------------------------------
 
 @import "ob-custom/ob-theme";
+
+// add cancel button to shipping modal
+.ob-shipping-modal {
+    display: flex;
+}
+.ob-shipping-modal .swal2-content,
+.ob-shipping-modal .swal2-header {
+    order:2;
+}
+.ob-shipping-modal .swal2-actions {
+    display: flex !important;
+    order: 1;
+    justify-content: flex-end;
+}
+.ob-shipping-modal button.swal2-cancel {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 5px 20px;
+    display: flex !important;
+    justify-content: flex-end;
+}
+@media(min-width: 500px) {
+    .ob-shipping-modal .swal2-actions {
+        height: 0;
+    }
+}
+
+// overflow fix for main menu when breaking over 2+ lines
+.header .header-container{
+    overflow: visible;
+    align-items: flex-start;
+}
+.header .header-container .navPages-container {
+    margin-top: 0;
+}
+.header .header-container .navPages-container .navPages {
+    background-color: transparent !important;
+}
+h1.header-logo.header-logo--center {
+    margin-top: 4px;
+}
+.navPages-action.ob-search-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#menu {
+    margin-left: auto;
+}
+.SubMenu {
+    background: #eee;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    z-index: -1;
+}
+.SubMenu .createaccount {
+    padding: 10px !important;
+}
+.login-row {
+    margin-top: 0 !important;
+}
+@media(min-width: 801px) and (max-width: 1020px) {
+    .header .navPages-container .navPages .navPages-list li a {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .header .navPages-container .navPages .navPages-list li a svg {
+        max-width: 14px;
+        max-height: 14px;
+    }
+    span.navUser-item--sub.full-cart-qty.ob-desktop,
+    .header .countPill {
+        font-size: 10px;
+    }
+    a.navPages-action.ob-search-toggle {
+        padding-left: 2px !important;
+    }
+}
+@media(min-width: 801px) {
+    #menu .navPages ol,#menu .navPages ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    .header {
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid #eee; 
+    }
+    .SubMenu {
+        display: inline-block;
+    }
+}
+
+// add submenu to mainmenu
+.HasDropDown:hover .SubMenu {
+    opacity: 1;
+    z-index: 1;
+}
+//hide the native checkout button in cart preview modal
+#previewModal .previewCartCheckout .button--primary:nth-child(1) {
+    display: none;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+       .accordion {
+         background-color: #eee;
+         color: #444;
+         cursor: pointer;
+         padding: 18px;
+         width: 100%;
+         text-align: left;
+         border: none;
+         outline: none;
+         transition: 0.4s;
+       }
+       
+       /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+       .active, .accordion:hover {
+         background-color: #ccc;
+       }
+       
+       /* Style the accordion panel. Note: hidden by default */
+       .panel {
+         padding: 0 18px;
+         background-color: white;
+         display: none;
+         overflow: hidden;
+       } 

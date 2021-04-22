@@ -122,6 +122,21 @@ label.collapse {
 <div id="pickup-selection" class="hidden-section">
   <h4>Step 2: Select a Pickup Location</h4>
   <h5 class="separator">Retail Locations</h5>
+ <!--<div class="pickup-radio-group">
+    <div class="label-input-container" >
+      <input type="radio" id="pickup-houston" name="pickup" value="My Fit Foods Houston">
+      <label for="pickup-houston"> <span style="font-weight:600">My Fit Foods Houston</span>
+        <label class="collapse" for="_0">hours</label>
+        <input id="_0" type="checkbox">
+        <div class="extra-info">
+          <p>Store hours
+            <br>Monday - Thursday: 7am - 8pm
+            <br>Friday: 7am - 6pm
+            <br>Saturday: 9am - 6pm
+            <br>Sunday: 10am - 8pm </p>
+        </div>
+      </label>
+    </div>-->
   <div class="pickup-radio-group">
     <div class="label-input-container">
       <input type="radio" id="pickup-beaverton" name="pickup" value="My Fit Foods Beaverton">
@@ -147,7 +162,7 @@ label.collapse {
         <div class="extra-info">
           <p>8101 Belleview Ave #w-2, Denver, CO 80237</p>
           <p>Store hours
-            <br>Monday - Thursday: 7am - 8pm
+            <br>Monday - Wednesday: 7am - 8pm
             <br>Friday: 7am - 7pm
             <br>Saturday: 8am - 6pm
             <br>Sunday: 10am - 8pm </p>
@@ -302,6 +317,20 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
+      <input type="radio" id="pickup-cp-broadway" name="pickup" value="Core Progression S. Broadway">
+      <label for="pickup-cp-broadway"> <span style="font-weight:600">Core Progression S. Broadway</span>
+        <label class="collapse" for="_7">hours</label>
+        <input id="_7" type="checkbox">
+        <div class="extra-info">
+          <p>2565 S Broadway, Denver, CO 80210</p>
+          <p>Store hours
+            <br>Monday: 10:00am - 4:00pm
+            <br>Wednesday: 10:00am - 4:00pm</p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
       <input type="radio" id="pickup-core-progression" name="pickup" value="Core Progression Northglenn">
       <label for="pickup-core-progression"> <span style="font-weight:600">Core Progression Northglenn</span>
         <label class="collapse" for="_7">hours</label>
@@ -357,7 +386,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-denver-academy" name="pickup" value="Denver Sheriff Dept. Academy">
-      <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Department Academy</span>
+      <label for="pickup-denver-academy"> <span style="font-weight:600">Denver Sheriff Dept Academy</span>
         <label class="collapse" for="_15">hours</label>
         <input id="_15" type="checkbox">
         <div class="extra-info">
@@ -385,7 +414,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-douglas-sheriff" name="pickup" value="Douglas County Sheriff’s Dept.">
-      <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Department</span>
+      <label for="pickup-douglas-sheriff"> <span style="font-weight:600">Douglas County Sheriff’s Dept</span>
         <label class="collapse" for="_17">hours</label>
         <input id="_17" type="checkbox">
         <div class="extra-info">
@@ -439,8 +468,8 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
-      <input type="radio" id="pickup-thornton-po" name="pickup" value="Thornton Police Department">
-      <label for="pickup-thornton-po"> <span style="font-weight:600">Thornton Police Department</span>
+      <input type="radio" id="pickup-thornton-po" name="pickup" value="Thornton Police Dept">
+      <label for="pickup-thornton-po"> <span style="font-weight:600">Thornton Police Dept</span>
         <label class="collapse" for="_82">hours</label>
         <input id="_82" type="checkbox">
         <div class="extra-info">
@@ -454,7 +483,7 @@ label.collapse {
     </div>
     <div class="label-input-container">
       <input type="radio" id="pickup-thornton-po-sub" name="pickup" value="Thornton Police Dept. Substation">
-      <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Department Substation</span>
+      <label for="pickup-thornton-po-sub"> <span style="font-weight:600">Thornton Police Dept Substation</span>
         <label class="collapse" for="_81">hours</label>
         <input id="_81" type="checkbox">
         <div class="extra-info">
@@ -640,7 +669,11 @@ function getCurrentMomentMountain() {
 function getCurrentMomentPacific() {
   return moment().tz('America/Los_Angeles');
 }
+function getAnthonyHoustonDay() {
+  const d = new Date('2021-05-05');
+  return d.setDate(d.getDate() + 1);
 
+}
 function checkCutoffDaily(currentMoment) {
   const hours = Number(currentMoment.format("HH"));
   const minutes = Number(currentMoment.format('mm'));
@@ -685,6 +718,14 @@ function disableBlockedDates(date) {
 }
 
 const calendarConfig = {
+	["pickup-houston"]: {
+	    disable: [
+	      disableBlockedDates
+	    ],
+	    minDate: getAnthonyHoustonDay(),
+	    altInput: true,
+	    altFormat: "F j, Y",
+	  },	
   ["Colorado,"]: {
     disable: [
       disableSaturdays,
@@ -717,6 +758,7 @@ const calendarConfig = {
   },
   ["pickup-denver"]: {
     disable: [
+    disableThursdays,
     disableSaturdays,
       disableBlockedDates
     ],
@@ -1230,8 +1272,20 @@ const calendarConfig = {
     altInput: true,
     altFormat: "F j, Y",
   },
+  ["pickup-cp-broadway"]: {
+    disable: [
+      disableBlockedDates,
+      disableTuesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
 }
-
 const shippingPluginSelectors = {
   shippingMethodButtonSelector: '.shipping-method-choice-button',
   pickupSectionSelector: '#pickup-selection',
