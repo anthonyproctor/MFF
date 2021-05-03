@@ -455,8 +455,3 @@ export default class Cart extends PageManager {
         this.shippingEstimator = new ShippingEstimator($('[data-shipping-estimator]'));
     }
 }
-
-console.log("adding load class to unhide button");
-$(window).load(function() {
-    $("a#ob-shipping-checkout-trigger").addClass('loaded');
-});

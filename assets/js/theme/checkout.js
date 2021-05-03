@@ -23,7 +23,11 @@ export default class Checkout extends PageManager {
     }
 
     if (!this.checkoutState) {
-      console.error("[Warning]: Pickup/Delivery Customization not properly persisting data for this customer.")
+      window.listenForMutations('#checkout-shipping-continue', function(element) {
+        reactTriggerChange(element);
+        $(element).addClass('ob-hidden');
+      });
+      console.log("tried to hide button");
       return false;
     }
 

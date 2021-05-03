@@ -58,6 +58,21 @@ const retailLocationDefaults = [
       Saturday: "9am - 6pm",
       Sunday: "10am - 8pm"
     }
+  },
+  {
+    id: 5,
+    input_id: "houston",
+    name: "My Fit Foods Houston",
+    address: "3239 SW Freeway Houston, TX 77027",
+    hours: {
+      Monday: "8am - 8pm",
+      Tuesday: "8am - 8pm",
+      Wednesday: "8am - 8pm",
+      Thursday: "8am - 8pm",
+      Friday: "8am - 6pm",
+      Saturday: "9am - 6pm",
+      Sunday: "10am - 8pm"
+    }
   }
 ]
 
@@ -356,6 +371,36 @@ const satelliteLocationDefaults = [
       Monday: "10:00pm - 4:00pm",
       Tuesday: "",
       Wednesday: "10:00pm - 4:00pm",
+      Thursday: "",
+      Friday: "",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
+  {
+    id: 96,
+    input_id: "pickup-stonebridge",
+    name: "Stonebridge Companies",
+    address: "4949 S. Niagara St. #300, Denver, CO 80237",
+    hours: {
+      Monday: "8:00am - 12:00pm",
+      Tuesday: "",
+      Wednesday: "8:00am - 12:00pm",
+      Thursday: "",
+      Friday: "",
+      Saturday: "",
+      Sunday: ""
+    }
+  },
+  {
+    id: 97,
+    input_id: "pickup-bybfit",
+    name: "BYB Fitness",
+    address: "20203 SW 95th Ave. Tualatin, OR 97062",
+    hours: {
+      Monday: "4:30pm - 7:00pm",
+      Tuesday: "",
+      Wednesday: "",
       Thursday: "",
       Friday: "",
       Saturday: "",

@@ -256,6 +256,16 @@ function handleZipCodeVerification(event) {
 
       buildCalendar('Oregon,');
       toggleSectionVisibility(deliveryTimeGroupSelector, 'show');
+    } else if (state.shippingMethod === 'Texas,'){
+
+      state.zipCode = zipCode;
+
+      setZipCodeButtonMessage("Zip Code Accepted");
+      setZipCodeValidationMessage(zipCodeValidationMessages.success, 'success');
+      $(zipCodeButtonSelector).addClass('success');
+
+      buildCalendar('Texas,');
+      toggleSectionVisibility(deliveryTimeGroupSelector, 'show');
     }
 
   } else {
@@ -321,6 +331,8 @@ function validateState(state) {
   } else if (state.shippingMethod === 'Colorado,' && !state.time) {
     setCheckoutValidationMessage(`Please select a delivery time.`, "error");
   } else if (state.shippingMethod === 'Oregon,' && !state.time) {
+    setCheckoutValidationMessage(`Please select a delivery time.`, "error");
+  } else if (state.shippingMethod === 'Texas,' && !state.time) {
     setCheckoutValidationMessage(`Please select a delivery time.`, "error");
   } else {
 

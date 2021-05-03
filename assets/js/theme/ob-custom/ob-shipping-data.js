@@ -103,6 +103,9 @@ label.collapse {
   <button class="shipping-method-choice-button" data-method="Oregon,">
     Delivery - Oregon
   </button>
+  <button class="shipping-method-choice-button" data-method="Texas,">
+    Delivery - Texas
+  </button>
   <!--
     <button class="shipping-method-choice-button" data-method="Shipping">	
       Shipping - Colorado	
@@ -122,21 +125,7 @@ label.collapse {
 <div id="pickup-selection" class="hidden-section">
   <h4>Step 2: Select a Pickup Location</h4>
   <h5 class="separator">Retail Locations</h5>
- <!--<div class="pickup-radio-group">
-    <div class="label-input-container" >
-      <input type="radio" id="pickup-houston" name="pickup" value="My Fit Foods Houston">
-      <label for="pickup-houston"> <span style="font-weight:600">My Fit Foods Houston</span>
-        <label class="collapse" for="_0">hours</label>
-        <input id="_0" type="checkbox">
-        <div class="extra-info">
-          <p>Store hours
-            <br>Monday - Thursday: 7am - 8pm
-            <br>Friday: 7am - 6pm
-            <br>Saturday: 9am - 6pm
-            <br>Sunday: 10am - 8pm </p>
-        </div>
-      </label>
-    </div>-->
+    
   <div class="pickup-radio-group">
     <div class="label-input-container">
       <input type="radio" id="pickup-beaverton" name="pickup" value="My Fit Foods Beaverton">
@@ -170,6 +159,20 @@ label.collapse {
         </div>
       </label>
     </div>
+    <!--<div class="label-input-container" >
+      <input type="radio" id="pickup-houston" name="pickup" value="My Fit Foods Houston">
+      <label for="pickup-houston"> <span style="font-weight:600">My Fit Foods Houston</span>
+        <label class="collapse" for="_5">hours</label>
+        <input id="_5" type="checkbox">
+        <div class="extra-info">
+          <p>3239 SW Freeway Houston, TX 77027</p>
+          <p>Store hours
+            <br>Monday - Wednesday: 7am - 8pm
+            <br>Friday: 7am - 6pm
+            <br>Sunday: 10am - 8pm </p>
+        </div>
+      </label>
+    </div>-->
     <div class="label-input-container">
       <input type="radio" id="pickup-oswego" name="pickup" value="My Fit Foods Lake Oswego">
       <label for="pickup-oswego"> <span style="font-weight:600">My Fit Foods Lake Oswego</span>
@@ -455,6 +458,20 @@ label.collapse {
       </label>
     </div>
     <div class="label-input-container">
+      <input type="radio" id="pickup-stonebridge" name="pickup" value="Stonebridge Companies">
+      <label for="pickup-stonebridge"> <span style="font-weight:600">Stonebridge Companies</span>
+        <label class="collapse" for="_96">hours</label>
+        <input id="_96" type="checkbox">
+        <div class="extra-info">
+          <p>4949 S. Niagara St. #300, Denver, CO 80237</p>
+          <p>Store hours
+            <br>Monday: 8:00am - 12:00pm
+            <br>Wednesday: 8:00am - 12:00pm </p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
       <input type="radio" id="pickup-otf-thornton" name="pickup" value="OrangeTheory Thornton">
       <label for="pickup-otf-thornton"> <span style="font-weight:600">OrangeTheory Thornton</span>
         <label class="collapse" for="_29">hours</label>
@@ -532,6 +549,20 @@ label.collapse {
           <p>41745 NW Wilkesboro Rd, Banks, OR 97106</p>
           <p>Store hours
             <br>Monday: 3:30pm - 6:30pm </p>
+          <p>Please place orders before 2:15pm for next-day pickup</p>
+        </div>
+      </label>
+    </div>
+    <div class="label-input-container">
+      <input type="radio" id="pickup-bybfit" name="pickup" value="BYB Fitness">
+      <label for="pickup-bybfit"> <span style="font-weight:600">BYB Fitness</span>
+        <label class="collapse" for="_97">hours</label>
+        <input id="_97" type="checkbox">
+        <div class="extra-info">
+          <p>20203 SW 95th Ave. Tualatin, OR 97062</p>
+          <p>Store hours
+            <br>Monday: 4:30pm - 7:00pm
+          </p>
           <p>Please place orders before 2:15pm for next-day pickup</p>
         </div>
       </label>
@@ -662,15 +693,24 @@ const zipCodeValidationMessages = {
   success: "Zip Code Verified, please select a date!"
 }
 
+function getCurrentMomentCentral() {
+  return moment().tz('America/Chicago');
+}
+
 function getCurrentMomentMountain() {
-  return moment().tz('America/Denver')
+  return moment().tz('America/Denver');
 }
 
 function getCurrentMomentPacific() {
   return moment().tz('America/Los_Angeles');
 }
 function getAnthonyHoustonDay() {
-  const d = new Date('2021-05-05');
+  const d = new Date('2021-05-06');
+  return d.setDate(d.getDate() + 1);
+
+}
+function getAnthonyHoustonDayDelivery() {
+  const d = new Date('2021-05-02');
   return d.setDate(d.getDate() + 1);
 
 }
@@ -720,6 +760,8 @@ function disableBlockedDates(date) {
 const calendarConfig = {
 	["pickup-houston"]: {
 	    disable: [
+        disableSaturdays,
+        disableThursdays,
 	      disableBlockedDates
 	    ],
 	    minDate: getAnthonyHoustonDay(),
@@ -744,6 +786,17 @@ const calendarConfig = {
       disableBlockedDates
     ],
     minDate: checkCutoffDaily(getCurrentMomentPacific()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["Texas,"]: {
+    // Disable Texas Delivery on Saturdays.
+    disable: [
+      disableSaturdays,
+      disableThursdays,
+      disableBlockedDates
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentCentral()),
     altInput: true,
     altFormat: "F j, Y",
   },
@@ -1272,10 +1325,37 @@ const calendarConfig = {
     altInput: true,
     altFormat: "F j, Y",
   },
+  ["pickup-stonebridge"]: {
+    disable: [
+      disableBlockedDates,
+      disableTuesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
   ["pickup-cp-broadway"]: {
     disable: [
       disableBlockedDates,
       disableTuesdays,
+      disableThursdays,
+      disableFridays,
+      disableSaturdays,
+      disableSundays
+    ],
+    minDate: checkCutoffDaily(getCurrentMomentMountain()),
+    altInput: true,
+    altFormat: "F j, Y",
+  },
+  ["pickup-bybfit"]: {
+    disable: [
+      disableBlockedDates,
+      disableTuesdays,
+      disableWednesdays,
       disableThursdays,
       disableFridays,
       disableSaturdays,
