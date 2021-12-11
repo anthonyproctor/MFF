@@ -19,7 +19,7 @@
     "jquery": "^3.5.1",
     "jquery.tabbable": "^1.0.1",
     "jstree": "github:vakata/jstree",
-    "lazysizes": "5.2.2",
+    "lazysizes": "5.3.2",
     "lodash": "^4.17.20",
     "moment-timezone": "^0.5.33",
     "nanobar": "^0.4.2",
